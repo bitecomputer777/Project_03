@@ -32,6 +32,8 @@
 	.li_hidden{
 		list-style-type:none;
 		display:none;
+		background-color:#b7f7e4;
+		text-size:14pt;
 		
 	}
 	
