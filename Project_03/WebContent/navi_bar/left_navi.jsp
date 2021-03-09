@@ -140,7 +140,7 @@
 			<li id="b"><a href="" >주문관리</a>
 				<ul class="li_hidden">
 					<li><a href="order_admin/money_admin.jsp">입금확인</a></li>
-					<li><a href="">전체주문 내역</a></li>
+					<li><a href="order_list">전체주문 내역</a></li>
 					<li><a href="">배송관리</a></li>
 					<li><a href="">환불 및 교환</a></li>
 					
