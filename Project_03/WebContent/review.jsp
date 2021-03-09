@@ -9,33 +9,39 @@
 </head>
 <body>
 <div id='reviewtit'>  
-<div id='reviewtext'>리뷰</div>
-</div>
+<div id='textdetatit'>리뷰</div>
+
 
 <div id=lireview>
-<div id='reviewtext2'>리뷰</div>
+<span id='reviewtext2'>리뷰</span>
 
-<div id='reviewnum'>3</div>
-<div id='reviewtext2'>건</div>
+<span id='reviewnum'>3</span>
+<span id='reviewtext2'>건</span>
 </div>
 
-<div id=review>
-<div class=youreview>
-<div class=youname></div>
-<div id=youpoto></div>
-<div id=youreiewtext></div>
-</div>
+<div id='review'>
 
-<div id=myreiew>
-<div id=mypoto></div>
-<div id=myreiewtext> <textarea rows='8' cols='100' placeholder = '리뷰를 남겨주세요!' ></textarea> 
+<div id='weview'>
 
-</div>
-<button>작성</button>
+<div class='youreview'>
+<span class='youname'></span>
+<span] id='youreiewtext'></span>
 </div>
 </div>
 
+<div id='myreiew'>
+<span id='myname'> 
+<div>  작성자</div>
+<div> </div>
+</span>
 
+ <textarea  rows='5' cols='130' placeholder = '리뷰를 남겨주세요!' id='myreiewtext' ></textarea> 
+
+<button id='reviewbt'>작성</button>
+</div>
+</div>
+
+</div>
 
 
 

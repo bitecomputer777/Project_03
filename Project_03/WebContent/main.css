@@ -208,9 +208,9 @@ margin-top:40px;
 }
 
 
+.liprice{
 
-
-
+}
 
 .liitem{
 width:200px;
@@ -220,6 +220,12 @@ border:2px solid black;
 
 margin-left:70px;
 	
+}
+
+.liimg{
+border:1px solid black;	
+width:200px;
+height:200px;	
 }
 
 .img{
@@ -249,14 +255,11 @@ height:auto;
 .pricefil{
 width:200px;
 height:25px;	
-border:1px solid black;
 }
 
 .liprice{
 margin-left:120px;
 }
-
-
 
 #itemdeta{
 width:1200px;	
@@ -275,9 +278,7 @@ height:80px;
 text-align: center;	
 font-size: 22pt;
 font-weight:600;
-	
-}
-
+	}
 
 .tabletit{
 width:170px;
@@ -289,6 +290,7 @@ border:1px solid #DCDCDC;
 width:440px;
 height:25px;
 border:1px solid #DCDCDC;	
+
 }
 
 .tabletit2{
@@ -307,9 +309,6 @@ border:1px solid #DCDCDC;
 margin-top:10px;	
 }
 
-
-
-
 #imgdeta{
 margin-top:130px;	
 width:1200px;	
@@ -323,13 +322,113 @@ height:auto;
 
 
 #review{
-width:600px;	
+width:1200px;	
 height:200px;	
 }
 
 
+#reviewtit{
+width:1200px;	
+
+}
 
 
+#myreiew{
+border:1px solid black;
+width:1197px;	
+height:100px;
+}
 
 
+#weview{
+border:1px solid #DCDCDC;
+width:1200px;
+height:auto;	
+}
+
+.youreview{
+border:1px solid #DCDCDC;
+width:1200px;
+height:97;
+	}
+.youname{
+width:150px;	
+height:100px;	
+display:inline-block;
+}	
+#youreiewtext{
+width:900px;
+height:100px;	
+display:inline-block;
+}	
+	
+	
+	
+	
+	
+#mypoto{
+border:1px solid #B8B8B8 ;
+background-color:#DCDCDC;
+width:90px;
+height:90px;
+display:inline-block;
+text-align: center;
+	font-size: 16pt;
+font-weight:550;	
+}
+
+#myreiewtext {
+width:830px;
+height:80px;
+top:-11.5px;
+position: relative;
+}
+
+#myname{
+width:120px;
+height:100px;	
+border:1px solid black ;
+display:inline-block;
+}
+
+#reviewbt{
+width:100px;
+height:50px;
+	font-size: 13pt;
+font-weight:500;	
+margin-left:120px;
+border:3px solid black ;
+top:-22px;
+position: relative;
+}
+	
+	
+#reviewtext2{
+	font-size: 22pt;
+font-weight:650;
+	}	
+	
+#reviewnum{
+font-size: 27pt;
+font-weight:800;	
+background-color:#FFFFFF;
+}	
+
+#reviewnum:hover{
+background-color:#DCDCDC;
+cursor:pointer;	
+}
+
+
+#change tr td{
+border:3px solid black ;	
+width:1197px;
+height:auto;
+}
+
+#changetit{
+	text-align: center;	
+font-size: 22pt;	
+font-weight:550;
+}
 
