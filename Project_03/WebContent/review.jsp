@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>리뷰</title>
+<link rel='stylesheet' type='text/css' href= 'main.css'>
 </head>
 <body>
 <div id='reviewtit'>  
@@ -27,8 +28,10 @@
 
 <div id=myreiew>
 <div id=mypoto></div>
-<div id=myreiewtext></div>
-<dutton>작성</dutton>
+<div id=myreiewtext> <textarea rows='8' cols='100' placeholder = '리뷰를 남겨주세요!' ></textarea> 
+
+</div>
+<button>작성</button>
 </div>
 </div>
 

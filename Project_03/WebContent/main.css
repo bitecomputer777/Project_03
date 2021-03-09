@@ -182,32 +182,29 @@ font-weight:550;
 background-color:#D7D2FF
 }
 
+
 #itemmore:hover{
 background-color:#B6B5DB;
 cursor:pointer;	
-	
-}	
+display:inline-block;
+	}	
 
 
 
 
 #screen{
-width:1195px;	
-border:1px solid black;	
+width:1200px;	
+margin-top:50px;
 height:auto;
+margin-bottom:50px;
 	
 }
-
-
-
-
 
 
 #moreitem{
 width:1200px;
 height:307px;
 margin-top:40px;	
-
 }
 
 
@@ -235,9 +232,18 @@ width:200px;
 height:100px;
 }
 	
+.litit{
+width:200px;
+height:20px;	
+}
 .litext{
 width:200px;
-height:70px;	
+height:44px;
+margin-top:6px;		
+}
+
+#screen{
+height:auto;	
 }
 
 .pricefil{
@@ -252,6 +258,74 @@ margin-left:120px;
 
 
 
+#itemdeta{
+width:1200px;	
+height:auto;	
+}
+
+
+
+
+
+
+
+
+#textdetatit{
+height:80px;	
+text-align: center;	
+font-size: 22pt;
+font-weight:600;
+	
+}
+
+
+.tabletit{
+width:170px;
+height:25px;	
+border:1px solid #DCDCDC;
+}
+
+.tabletext{
+width:440px;
+height:25px;
+border:1px solid #DCDCDC;	
+}
+
+.tabletit2{
+width:170px;
+height:50px;	
+border:1px solid #DCDCDC;
+}
+
+.tabletext2{
+width:1050px;
+height:50px;
+border:1px solid #DCDCDC;	
+}
+
+#table2{
+margin-top:10px;	
+}
+
+
+
+
+#imgdeta{
+margin-top:130px;	
+width:1200px;	
+height:auto;		
+}
+
+#detaimg{
+width:1200px;	
+height:auto;
+}	
+
+
+#review{
+width:600px;	
+height:200px;	
+}
 
 
 

@@ -76,7 +76,6 @@
 <option> 옵션 3</option>
 <option> 옵션 4</option>
 </select>	
-		
 
 
 <div id='void'> </div>

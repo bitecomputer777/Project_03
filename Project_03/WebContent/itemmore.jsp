@@ -20,6 +20,9 @@
 
 
 <div id='screen'>
+
+
+
 </div>
 
 <div id='moreitem'>
@@ -31,8 +34,12 @@
 <img class='img' src = "img/1.jpg">
 </div>
 <div class='liitemtext'>
+<div class='litit'>
+아주 맛있는 닭발(상품이름)
+</div>
 <div class='litext'>
-아주 맛있는 닭발
+아주 맛있어요!(상품 내용)
+
 </div>
 <div class='pricefil'> 
 <div class='liprice'>
@@ -46,65 +53,6 @@
 
 
 
-
-<span class='liitem'>
-<a href='' >
-<div class=liimg>
-<img class='img' src = "img/1.jpg">
-</div>
-<div class='liitemtext'>
-<div class='litext'>
-아주 맛있는 닭발
-</div>
-<div class='pricefil'> 
-<div class='liprice'>
-3000 원
-</div>
-</div>
-</div>
-</a>
-</span>
-
-
-
-
-<span class='liitem'>
-<a href='' >
-<div class=liimg>
-<img class='img' src = "img/1.jpg">
-</div>
-<div class='liitemtext'>
-<div class='litext'>
-아주 맛있는 닭발
-</div>
-<div class='pricefil'> 
-<div class='liprice'>
-3000 원
-</div>
-</div>
-</div>
-</a>
-</span>
-
-
-
-<span class='liitem'>
-<a href='' >
-<div class=liimg>
-<img class='img' src = "img/1.jpg">
-</div>
-<div class='liitemtext'>
-<div class='litext'>
-아주 맛있는 닭발
-</div>
-<div class='pricefil'> 
-<div class='liprice'>
-3000 원
-</div>
-</div>
-</div>
-</a>
-</span>
 
 
 
