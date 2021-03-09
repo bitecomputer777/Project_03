@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+#left_ul{
+			position:relative;
+			list-style-type:none;
+				
+			background-color: aqua;	
+			width:150px;
+			list-style-type:none;
+			margin: 0;
+			padding:0 24px;	
+		
+		}
+		li a{
+			display: block;
+			padding: 8px;
+			text-decoration:none;
+			font-weight: bold;
+			
+		
+		}
+		
+	.li_hidden{
+		list-style-type:none;
+		display:none;
+		
+	}
+	
+	#navi{
+	 width: 210px;
+    height: 1000px;
+    background-color: skyblue;
+	}
