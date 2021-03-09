@@ -7,6 +7,7 @@
 <title>마이 페이지</title>
 
 <link rel='stylesheet' type='text/css' href= 'my_fage.css'>
+	
 </head>
 <body>
 <div id ='s'> 마이 페이지 </div>
