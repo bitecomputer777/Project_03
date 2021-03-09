@@ -35,7 +35,7 @@
 		<%@ include file="/navi_bar/top_bar_index.jsp" %>
 		<%@ include file="/navi_bar/left_navi.jsp" %> 
 		<div id ="content">
-				<h2>임시 위피 리스트 바</h2>
+				<h2>경로 테스트</h2>
 				─────────────────────────────────────────────────────────────────
 				<div id="list_table">
 				
