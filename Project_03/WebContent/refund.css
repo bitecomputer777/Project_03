@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+#s img {
+	width :200px;
+	height: 200px;
+}
+#s {
+	border:1px solid black;
+	width:750px;
+	height:300px;
+	position: relative;
+	left: 650px;
+	margin: 100px 0px;
+	font-size: 30px;
+	}
+#a {
+	 position: relative;
+	 left: 0px;
+	 top: -145px;
+}
+#b {
+ position: relative;
+	 left: 215px;
+	 top: -135px;
+}
+#c {
+	 position: relative;
+	 left: 215px;
+	 top: -120px;
+}
+#d {
+	 position: relative;
+	 left: 290px;
+	 top: -60px;
+	 text-decoration:none;
+	 border : 1px solid black;
+
+
+}
+#f {
+ 	 position: relative;
+	 left: 400px;
+	 top: -60px;
+	 text-decoration:none;
+	 border : 1px solid black;
+	
+}
+
+
