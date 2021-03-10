@@ -31,11 +31,11 @@
 
 <div id='myreiew'>
 <span id='myname'> 
-<div>  작성자</div>
-<div> </div>
+<div id='name1'>  작성자</div>
+<div id='name2'> </div>
 </span>
 
- <textarea  rows='5' cols='130' placeholder = '리뷰를 남겨주세요!' id='myreiewtext' ></textarea> 
+ <span id='myreiewtext'><textarea  rows='4' cols='67' placeholder = '리뷰를 남겨주세요!'  ></textarea> </span>
 
 <button id='reviewbt'>작성</button>
 </div>

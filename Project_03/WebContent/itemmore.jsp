@@ -13,14 +13,14 @@
 <span id='itemmore'>상품정보</span>
 <span id='itemmore'>
 <span id='reviewtext'> 리뷰 </span>
-<span id='reviewnum'> 3 </span>
+<span id='reviewtitnum'> 3 </span>
 </span>
 <span id='itemmore'> 반품, 교환정보 </span>
 </div>
 
 
 <div id='screen'>
-
+ <jsp:include page="itemtext.jsp" />
 
 
 </div>
@@ -29,7 +29,7 @@
 
 
 <span class='liitem'>
-<a href='' >
+<a href='item.jsp' >
 <div class=liimg>
 <img class='img' src = "img/1.jpg">
 </div>

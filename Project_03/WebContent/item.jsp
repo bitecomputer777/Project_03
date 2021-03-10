@@ -94,8 +94,7 @@
 				<span  id="totalnum">
 				<strong class="num">39800</strong>
 				원 </span>
-			</sapn>
-			
+			</span>
 			</div>
 			<div >
 				<button class="btncart" onclick="" type="button"> 장바구니 </button>
@@ -104,8 +103,12 @@
 	 	</div>
 	 </span>
 </div>
-
 		<div id='down'>
+		
+		
+		 <jsp:include page="itemmore.jsp" />
+		
+		
 		
 		</div>
 
