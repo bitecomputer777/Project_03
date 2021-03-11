@@ -1,25 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+
+    
+    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>상세보기 하단</title>
 <link rel='stylesheet' type='text/css' href= 'main.css'>
+<script>
+
+function more2(){
+
+	
+	
+}
+</script>
 </head>
 <body>
 
+
+
 <div id='dnmanu'>
-<span id='itemmore'>상품정보</span>
-<span id='itemmore'>
+<a href='index.jsp?part=itemmore'><button id='itemmore'>상품정보</button></a>
+ <a href='index.jsp?part=review'> <button id='itemmore'>
 <span id='reviewtext'> 리뷰 </span>
-<span id='reviewtitnum'> 3 </span>
-</span>
-<span id='itemmore'> 반품, 교환정보 </span>
-</div>
+<span id='reviewtitnum' onclick='more3()'> 3 </span>
+</button></a>
+ <a href='index.jsp?part=change'><button id='itemmore'>반품, 교환정보 </span></a>
+</button>
 
 
 <div id='screen'>
+
  <jsp:include page="itemtext.jsp" />
 
 
