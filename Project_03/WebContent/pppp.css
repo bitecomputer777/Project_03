@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+#od1{
+	border:1px solid black;
+	width:750px;
+	height:150px;
+	position: relative;
+	 left: 650px;
+	 margin: 100px 0px;
+	}
+#img{
+	width : 150px;
+	height : 150px;
+}
+#bb{
+	 position: relative;
+	 left: 15px;
+	 top: -120px;
+}
+#cc{ position: relative;
+	 left: -55px;
+	 top: -90px;
+}
+#dd{ position: relative;
+	 left: -235px;
+	 top: -62px;
+}
+#ee{ position: relative;
+	 left: -279px;
+	 top: -35px;
+}
+#ff{ position: relative;
+	 left: 50px;
+	 top: -60px;
+}
+#odx{ position: relative;
+	 left: -321px;
+	 top: -12px;
+}
+#odw{ position: relative;
+	 left: 508px;
+	 top: -35px;
+}
+#qw{	border:1px solid black;
+	width:750px;
+	height:150px;
+	position: relative;
+	 left: 650px;
+	 margin: 0px 0px;
+	
+}
+#pp{
+	
+	width:750px;
+	height:150px;
+	position: relative;
+	 left: 650px;
+	 margin: 0px 0px;
+}
+
+#wq{	border:1px solid black;
+	width:750px;
+	height:150px;
+	position: relative;
+	 left: 650px;
+	 margin: 100px 0px;
+	
+}
+
+#www{
+		border:1px solid black;
+	width:750px;
+	height:150px;
+	position: relative;
+	 left: 650px;
+	 margin: 100px 0px;
+}
+
+#ok{
+		border:1px solid black;
+	width:750px;
+	height:150px;
+	position: relative;
+	 left: 650px;
+	 margin: 100px 0px;
+}

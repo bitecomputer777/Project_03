@@ -5,7 +5,7 @@
 
 #up{
 width:1200px;
-height:1200px;	
+
 margin:0;
 }
 #tag{
@@ -146,7 +146,7 @@ cursor:pointer;
 	
 #itemimg{
 width:595px;
-height:1200px;	
+
 margin:0;
 display:inline-block;
 }
@@ -156,25 +156,24 @@ font-size:10pt;
 }
 
 #text{
-width:595px;
-height:1200px;	
+width:595px;	
 margin:0;
 display:inline-block;
 position: relative;
-top:-70px;
+top:-100px;
 
 }
 
 #dnmanu{
 width:1200px;
-height:65px;	
+height:86px;	
 	
 }
 
 #itemmore{
 border:3px solid black;		
 width:390px;
-height:61px;
+height:80px;
 display:inline-block;
 text-align: center;		
 font-size: 18pt;
@@ -182,38 +181,35 @@ font-weight:550;
 background-color:#D7D2FF
 }
 
+
 #itemmore:hover{
 background-color:#B6B5DB;
 cursor:pointer;	
-	
-}	
+display:inline-block;
+	}	
 
 
 
 
 #screen{
-width:1195px;	
-border:1px solid black;	
+width:1200px;	
+margin-top:50px;
 height:auto;
+margin-bottom:50px;
 	
 }
-
-
-
-
 
 
 #moreitem{
 width:1200px;
 height:307px;
 margin-top:40px;	
-
 }
 
 
+.liprice{
 
-
-
+}
 
 .liitem{
 width:200px;
@@ -223,6 +219,12 @@ border:2px solid black;
 
 margin-left:70px;
 	
+}
+
+.liimg{
+border:1px solid black;	
+width:200px;
+height:200px;	
 }
 
 .img{
@@ -235,21 +237,33 @@ width:200px;
 height:100px;
 }
 	
+.litit{
+width:200px;
+height:20px;	
+}
 .litext{
 width:200px;
-height:70px;	
+height:44px;
+margin-top:6px;		
+}
+
+#screen{
+height:auto;	
 }
 
 .pricefil{
 width:200px;
 height:25px;	
-border:1px solid black;
 }
 
 .liprice{
 margin-left:120px;
 }
 
+#itemdeta{
+width:1200px;	
+height:auto;	
+}
 
 
 
@@ -258,4 +272,168 @@ margin-left:120px;
 
 
 
+#textdetatit{
+height:80px;	
+text-align: center;	
+font-size: 22pt;
+font-weight:600;
+	}
+
+.tabletit{
+width:170px;
+height:25px;	
+border:1px solid #DCDCDC;
+}
+
+.tabletext{
+width:440px;
+height:25px;
+border:1px solid #DCDCDC;	
+
+}
+
+.tabletit2{
+width:170px;
+height:50px;	
+border:1px solid #DCDCDC;
+}
+
+.tabletext2{
+width:1050px;
+height:50px;
+border:1px solid #DCDCDC;	
+}
+
+#table2{
+margin-top:10px;	
+}
+
+#imgdeta{
+margin-top:130px;	
+width:1200px;	
+height:auto;		
+}
+
+#detaimg{
+width:1200px;	
+height:auto;
+}	
+
+
+#review{
+width:1200px;	
+height:200px;	
+}
+
+
+#reviewtit{
+width:1200px;	
+
+}
+
+
+#myreiew{
+border:1px solid black;
+width:1197px;	
+height:100px;
+}
+
+
+#weview{
+border:1px solid #DCDCDC;
+width:1200px;
+height:auto;	
+}
+
+.youreview{
+border:1px solid #DCDCDC;
+width:1200px;
+height:97;
+	}
+.youname{
+width:150px;	
+height:100px;	
+display:inline-block;
+}	
+#youreiewtext{
+width:900px;
+height:100px;	
+display:inline-block;
+}	
+	
+#name1{
+margin-top:25px;		
+text-align: center;	
+}	
+	
+	
+	
+#mypoto{
+border:1px solid #B8B8B8 ;
+background-color:#DCDCDC;
+width:90px;
+height:90px;
+display:inline-block;
+text-align: center;
+	font-size: 16pt;
+font-weight:550;	
+}
+
+#myreiewtext {
+width:830px;
+height:80px;
+top:-8.7px;
+position: relative;
+margin-left:6px;
+}
+
+#myreiewtext textarea{
+font-size: 17pt;	
+}
+
+#myname{
+position: relative;
+top:-65px;
+width:120px;
+height:100px;	
+border:1px solid black ;
+display:inline-block;
+
+}
+
+#reviewbt{
+width:100px;
+height:50px;
+font-size: 15pt;
+font-weight:500;	
+margin-left:115px;
+border:3px solid black ;
+top:-25px;
+position: relative;
+}
+	
+	
+#reviewtext2{
+	font-size: 22pt;
+font-weight:650;
+	}	
+	
+#reviewnum{
+font-size: 27pt;
+font-weight:800;	
+}	
+
+
+
+#change tr td{
+border:3px solid black ;	
+width:1197px;
+height:auto;
+}
+
+#changetit{
+	text-align: center;	
+font-size: 22pt;	
+font-weight:550;
+}
 
