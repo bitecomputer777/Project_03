@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<c:set var="path" value="http://localhost:8080${pageContext.request.contextPath }"/>
+<c:set var="path_1" value="http://localhost:8080${pageContext.request.requestURL }"/>
+
     
 <!DOCTYPE html>
 <html>
@@ -114,16 +119,10 @@
 					   
 		});
 	
-	$(document).ready(function(){
-		var Str="Project_03/WebContent";
-		
-		
-		
-		$("#ninja").click(function(){
-			location.href=str+"/admin_member/ninja.jsp";
-		});
-		
-	});
+ 	
+	</script>
+	<script>
+	
 	</script>
 <body>
 	
@@ -139,34 +138,46 @@
 			</li>
 			<li id="b"><a href="" >주문관리</a>
 				<ul class="li_hidden">
-					<li><a href="order_admin/money_admin.jsp">입금확인</a></li>
-					<li><a href="order_list">전체주문 내역</a></li>
+				
+			
+					<li><a href="../money_admin.jsp">
+					입금확인</a></li>
+			
+							
+					<li><a href="${path}/order_list.jsp">전체주문 내역</a></li>
 					<li><a href="">배송관리</a></li>
 					<li><a href="">환불 및 교환</a></li>
+				
 					
 				</ul>
 			</li>
 			
 			<li id="c"><a href="" >상품관리</a>
 				<ul class="li_hidden">
-					<li><a href="product_admin/product_insert.jsp">상품등록</a></li>
-					<li><a href="product_admin/product_list.jsp">상품목록</a></li>
-					<li><a href="product_admin/product_show_input.jsp">샾에 등록</a></li>
-					<li><a href="product_admin/">요구상풒</a></li>
-					<li><a href="product_admin/">재고관리</a></li>
+					<li><a href="${path}/product_admin/product_insert.jsp">상품등록</a></li>
+					<li><a href="${path}/product_admin/product_list.jsp">상품목록</a></li>
+					<li><a href="${path}/product_admin/product_show_input.jsp">샾에 등록</a></li>
+					<li><a href="${path}/product_admin/product_admin/">요구상풒</a></li>
+					<li><a href="${path}/product_admin/product_admin/">재고관리</a></li>
 					
 				</ul>
 			
 			</li>
-			<li id="d"><a href="" >회원관리</a>
-				<ul class="li_hidden">
-					<li><a href="admin_member/member_admin.jsp">회원목록</a></li>
-					<li><a href="admin_member/list_message.jsp">문의사항 메세지</a></li>
-					<li><a href="#" id="ninja">탈퇴 및 제제</a></li>
+			<li id="d"><a>회원관리</a>
+				<ul class="li_hidden" >
+					<!-- <li><a href="member_admin.do" name="cmd" value="member">회원목록</a></li>
+					<li><a href="list_message.do"name="cmd" value="message">문의사항 메세지</a></li>
+					<li ><a href="ninja.do" name="cmd" value="ninja" >탈퇴 및 제제 </a></li> -->
+					<li><a href="member_admin.do" > 회원목록</a></li>
+					<li><a href="list_message.do">문의사항 메세지</a></li>
+					<li ><a href="ninja.do" >탈퇴 및 제제 </a></li>
+					
+					
 					
 				</ul>
 			
 			</li>
+			
 			<li><a href="">home</a></li>
 		
 		</ul>
