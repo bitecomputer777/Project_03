@@ -1,13 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-    <%String part = request.getParameter("part");
 
-    if(part!=null){
-	part+=".jsp";
-	%>
-<jsp:include page="<%=part%>"/>
-<%} else{%>
 
  
     
@@ -88,4 +82,4 @@
 
 </body>
 </html>
-<%}%>  
+ 

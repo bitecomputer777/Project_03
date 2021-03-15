@@ -24,12 +24,12 @@ function more2(){
 
 
 <div id='dnmanu'>
-<a href='index.jsp?part=itemmore'><button id='itemmore'>상품정보</button></a>
- <a href='index.jsp?part=review'> <button id='itemmore'>
+<a href='more.do'><button id='itemmore'>상품정보</button></a>
+ <a href='review.do'> <button id='itemmore'>
 <span id='reviewtext'> 리뷰 </span>
 <span id='reviewtitnum' onclick='more3()'> 3 </span>
 </button></a>
- <a href='index.jsp?part=change'><button id='itemmore'>반품, 교환정보 </span></a>
+ <a href='change.do'><button id='itemmore'>반품, 교환정보 </span></a>
 </button>
 
 
@@ -74,6 +74,7 @@ function more2(){
 
 </div>
 
-
+	<c:set var="file" value="${part }/${sub }.jsp"/>
+</c:if>
 </body>
 </html>
