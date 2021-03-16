@@ -25,8 +25,8 @@
     
     <c:if test="${user==null }">
     <script>
-    alert("로그인 후 이용해주세요");
-    location.href="login.do";
+   // alert("로그인 후 이용해주세요");
+   // location.href="login.do";
 
     </script>
     </c:if>

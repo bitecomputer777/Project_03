@@ -2,10 +2,12 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<link rel='stylesheet' type='text/css' href= 'main.css'>
+
 <c:set var ="pagesize" value="10"/>
 <c:set var ="grpsize" value="5"/>
 <c:set var ="pagenum" value="1"/>
-<c:set var ="pagecount" value="1"/>
+<c:set var ="pagecount" value="1"/> 
 <c:set var ="skiprow" value="1"/>
 <c:set var ="dbcount" value="${list.size()}"/>
 
@@ -32,16 +34,13 @@
 
 
 
-<div id=lireview style='margin:0 auto; width:900px;'>
-<span id='reviewtext2'>리뷰</span>
+<span id='vinum' >번호</span>
+<span id='viname'>작성자</span>
+<span id='vidate'>작성날</span>
+<span id='vitext'>내용</span>
 
-<th width='80'>번호</th>
-<th width='200'>작성자</th>
-<th width='200'>작성날</th>
 
-<span id='reviewnum'>3</span>
-<span id='reviewtext2'>건</span>
-</div>
+
 
 <div id='review'>
 

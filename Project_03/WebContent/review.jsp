@@ -11,13 +11,23 @@ String user = (String)session.getAttribute("user"); //로그인 확인용
 <link rel='stylesheet' type='text/css' href= 'main.css'>
 </head>
 <body>
-<div id='reviewtit'>  
-<div id='textdetatit'>리뷰
 
 
+
+ 
+<div id='textdetatit'>리뷰</div>
+<div id=lireview'>
+
+<span id='reviewtext2'>리뷰</span>
+<span id='reviewnum'>3</span>
+<span id='reviewtext2'>건</span>
+</div>
+
+
+<div id='reviewtit'> 
  <jsp:include page="reviewlist.jsp" />
 
-</div>
+
 
 </div>
 
@@ -32,19 +42,5 @@ String user = (String)session.getAttribute("user"); //로그인 확인용
 
 
 </body>
-<script>
 
-
-	var take=document.querySelector("#myreiewtext");
-	take.addEventListener("click",function(){
-		<% if (user==null) {%>
-		alert("로그인을 먼저 해주세요.");
-		<%}%>
-		
-	
-		
-	});
-
-
-</script>
 </html>

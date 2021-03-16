@@ -322,7 +322,7 @@ height:auto;
 
 #review{
 width:1200px;	
-height:200px;	
+	
 }
 
 
@@ -337,6 +337,35 @@ border:1px solid black;
 width:1197px;	
 height:100px;
 }
+
+
+
+#vinum{
+width:100px;
+border:1px solid #DCDCDC;	
+font-size: 13pt;	
+height:100px;
+}
+#viname{
+width:200px;	
+border:1px solid #DCDCDC;
+font-size: 13pt;
+height:100px;
+}
+#vidate{
+width:200px;	
+border:1px solid #DCDCDC;
+font-size: 13pt;
+height:100px;
+}
+#vitext{
+width:700px;	
+border:1px solid #DCDCDC;
+font-size: 13pt;
+height:100px;
+}
+
+
 
 
 #weview{
