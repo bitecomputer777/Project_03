@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 상세 보기 </title>
-<link rel='stylesheet' type='text/css' href= 'main.css'>
+<link rel='stylesheet' type='text/css' href= 'item.css'>
 
 
 </head>

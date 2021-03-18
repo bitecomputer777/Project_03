@@ -8,7 +8,7 @@ String user = (String)session.getAttribute("user"); //로그인 확인용
 <head>
 <meta charset="UTF-8">
 <title>리뷰</title>
-<link rel='stylesheet' type='text/css' href= 'main.css'>
+<link rel='stylesheet' type='text/css' href= 'item.css'>
 </head>
 <body>
 
@@ -19,7 +19,7 @@ String user = (String)session.getAttribute("user"); //로그인 확인용
 <div id=lireview'>
 
 <span id='reviewtext2'>리뷰</span>
-<span id='reviewnum'>3</span>
+<span id='reviewnum'>0</span>
 <span id='reviewtext2'>건</span>
 </div>
 
