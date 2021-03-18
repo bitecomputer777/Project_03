@@ -15,25 +15,15 @@ public class itemmore_hnd  implements mainitem_hnd{
        public String action(HttpServletRequest req, 
 			HttpServletResponse res, String kind) {
 		
-		String view="itemmore.jsp";
 		
-		kind = kind.substring(0,kind.indexOf("."));
-		
-				
-			req.setAttribute("part", "");
+String view="itemmore.jsp";
+kind = kind.substring(0,kind.indexOf("."));
+            req.setAttribute("part", "member");
 			req.setAttribute("sub", kind);
-		
-	
-		return view;
-		
-		
-	
-			}
-	
-		
-	
+return view;
 
-	}	
+			}
+}	
 	 
 	
 

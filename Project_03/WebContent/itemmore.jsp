@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+   <c:set var="path" value="http://localhost:8080${pageContext.request.contextPath }" /> 
 
     
     
@@ -35,7 +36,11 @@ function more2(){
 
 <div id='screen'>
 
- <jsp:include page="itemtext.jsp" />
+<c:set var="file" value="itemtext.jsp"/>
+<c:if test="${part!=null} ">
+ <c:set var="file" value="${part}/${sub }.hsp"/>
+</c:if>
+ <jsp:include page="${file }"/>
 
 
 </div>
