@@ -140,11 +140,11 @@
 				<ul class="li_hidden">
 				
 			
-					<li><a href="../money_admin.jsp">
+					<li><a href="money_admin.do">
 					입금확인</a></li>
 			
 							
-					<li><a href="${path}/order_list.jsp">전체주문 내역</a></li>
+					<li><a href="order_list.do">전체주문 내역</a></li>
 					<li><a href="">배송관리</a></li>
 					<li><a href="">환불 및 교환</a></li>
 				
@@ -154,11 +154,11 @@
 			
 			<li id="c"><a href="" >상품관리</a>
 				<ul class="li_hidden">
-					<li><a href="${path}/product_admin/product_insert.jsp">상품등록</a></li>
-					<li><a href="${path}/product_admin/product_list.jsp">상품목록</a></li>
-					<li><a href="${path}/product_admin/product_show_input.jsp">샾에 등록</a></li>
-					<li><a href="${path}/product_admin/product_admin/">요구상풒</a></li>
-					<li><a href="${path}/product_admin/product_admin/">재고관리</a></li>
+					<li><a href="product_insert.do">상품등록</a></li>
+					<li><a href="product_list.do">상품목록</a></li>
+					<li><a href="product_show_input.do">샾에 등록</a></li>
+					<li><a href="">요구상풒</a></li>
+					<li><a href="">재고관리</a></li>
 					
 				</ul>
 			
