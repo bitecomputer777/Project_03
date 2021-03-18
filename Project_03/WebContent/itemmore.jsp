@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <title>상세보기 하단</title>
-<link rel='stylesheet' type='text/css' href= 'main.css'>
+<link rel='stylesheet' type='text/css' href= 'item.css'>
 <script>
 
 function more2(){
@@ -74,7 +74,6 @@ function more2(){
 
 </div>
 
-	<c:set var="file" value="${part }/${sub }.jsp"/>
-</c:if>
+	
 </body>
 </html>

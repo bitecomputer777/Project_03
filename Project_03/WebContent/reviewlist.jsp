@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<link rel='stylesheet' type='text/css' href= 'main.css'>
+<link rel='stylesheet' type='text/css' href= 'item.css'>
 
 <c:set var ="pagesize" value="10"/>
 <c:set var ="grpsize" value="5"/>
@@ -33,12 +33,12 @@
 </c:choose> 
 
 
-
+<div id=viup>
 <span id='vinum' >번호</span>
 <span id='viname'>작성자</span>
 <span id='vidate'>작성날</span>
 <span id='vitext'>내용</span>
-
+<div>
 
 
 

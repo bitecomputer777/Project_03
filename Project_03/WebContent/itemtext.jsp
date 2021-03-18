@@ -10,7 +10,7 @@
 <head>
 <meta charset="UTF-8">
 <title>상품정보</title>
-<link rel='stylesheet' type='text/css' href= 'main.css'>
+<link rel='stylesheet' type='text/css' href= 'item.css'>
 </head>
 <body>
 
@@ -67,12 +67,7 @@
 <div id='imgdeta1'>
 <img id='detaimg' src = "img/2.jpg">
 </div>
-<div id='imgdeta1'>
-<img id='detaimg' src = "img/3.jpg">
-</div>
-<div id='imgdeta1'>
-<img id='detaimg' src = "img/4.jpg">
-</div>
+
 
 </div>
 
