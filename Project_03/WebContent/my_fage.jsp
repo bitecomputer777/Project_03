@@ -27,7 +27,7 @@
 <a href = "">자주 산 상품</a>
 </div>
 <div id='f'> 
-<a href = "">쿠폰 등록</a>
+<a href = "http://localhost:8080/Project_03/coupon.jsp">쿠폰 등록</a>
 </div>
 </body>
 </html>
