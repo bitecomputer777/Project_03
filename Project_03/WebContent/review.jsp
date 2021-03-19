@@ -36,14 +36,13 @@ String user = (String)session.getAttribute("user"); //로그인 확인용
 
  
 
-     
-      <jsp:include page="reviewwrite.jsp" />
-     
+  <div style='margin-top:50px;'>   
+<jsp:include page="reviewwrite.jsp" />
+     </div>
 
 
-</div>
 
-</div>
+
 
 
 

@@ -24,7 +24,7 @@ public class review {
 		return num;
 	}
 	public void setNum(int num) {
-		this.num = num;
+		this.num =num;
 	}
 
 	public String getId() {

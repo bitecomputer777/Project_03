@@ -10,7 +10,7 @@ public class itemmore_hnd implements mainitem_hnd{
 	String view="main.jsp";
 		
 	
-		req.setAttribute("sub", "itme.jsp");
+		req.setAttribute("part", "item.jsp");
 		System.out.println("정상작동");
 		return view;	
 	}
