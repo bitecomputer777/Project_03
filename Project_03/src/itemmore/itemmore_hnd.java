@@ -16,11 +16,10 @@ public class itemmore_hnd  implements mainitem_hnd{
 			HttpServletResponse res, String kind) {
 		
 		
-String view="itemmore.jsp";
-kind = kind.substring(0,kind.indexOf("."));
-            req.setAttribute("part", "member");
-			req.setAttribute("sub", kind);
-return view;
+		String view="main.jsp";
+		kind = kind.substring(0,kind.indexOf("."));
+           req.setAttribute("sub", "item.jsp");
+		return view;
 
 			}
 }	

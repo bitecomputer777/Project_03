@@ -20,7 +20,7 @@ import com.main.main_hnd;
 /**
  * Servlet implementation class rute_navi
  */
-@WebServlet("/rute_navi")
+@WebServlet("/Control")
 public class Control extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Map<String,main_hnd>map = new HashMap<>();

@@ -33,12 +33,12 @@ public class control extends HttpServlet {
     }
 
     public void init(ServletConfig config) throws ServletException {
-		String Iparam=config.getInitParameter("share_config");
+		String Iparam=config.getInitParameter("config");
 		Properties prop = new Properties();
 		try(FileReader fs = new FileReader(Iparam)){
 			prop.load(fs);
 		}catch(IOException e) {
-			System.out.println("properties 파일 읽기 실패");
+			System.out.println("item properties 파일 읽기 실패");
 		}
 		
 		
@@ -85,7 +85,7 @@ public class control extends HttpServlet {
 		System.out.println(kind);
 		mainitem_hnd hd = map.get(kind);
 		
-		String view="itemmore.jsp";
+		String view="main.jsp";
 		if(hd!=null) {
 			view = hd.action(request, response, kind);
 		}
