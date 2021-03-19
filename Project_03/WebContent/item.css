@@ -339,6 +339,35 @@ height:100px;
 }
 
 
+#werivew{
+width:auto;
+height:auto;
+border:1px solid #DCDCDC;	
+}
+
+
+#vinum2{
+width:100px;
+	
+height:20px;
+}
+#viname2{
+width:170px;	
+
+height:20px;
+}
+#vidate2{
+width:200px;	
+
+height:20px;
+
+}
+#vitext2{
+width:700px;	
+height:20px;
+}
+
+
 
 #vinum{
 width:100px;
@@ -371,18 +400,21 @@ display:inline-block;
 }
 
 
-
-
-#weview{
-border:1px solid #DCDCDC;
-width:1200px;
-height:auto;	
+#logrview{
+margin-top:30px;
+width:1200px;	
+height:60px;	
+text-align: center;	
+font-size: 14.5pt;
+font-weight:400;
 }
+
+
 
 .youreview{
 border:1px solid #DCDCDC;
 width:1200px;
-height:97;
+height:auto;
 	}
 .youname{
 width:150px;	

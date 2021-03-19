@@ -35,40 +35,19 @@
 
 <div id=viup>
 <span id='vinum' >번호</span>
-<span id='viname'>작성자</span>
-<span id='vidate'>작성날</span>
-<span id='vitext'>내용</span>
-<div>
-
-
-
-<div id='review'>
-
-<div id='weview'>
-
-<div class='youreview'>
-<span class='youname'></span>
-<span] id='youreiewtext'></span>
+<span id='viname'>작성자</span>  
+<span id='vidate' >작성날</span>
+<span id='vitext' >내용</span>
 </div>
 
-    
-
-<tr >
 
 
-</tr>
+<div class='youreview'>
+
 <c:if test = "${list == null }">
-<tr>
-<td colspan ='$'> 등록 글이 없습니다.</td>
-</tr>
+<span><td colspan ='$'> 등록 글이 없습니다.</td></span>
 </c:if>
 <c:if test="${list!= null}">
-
-
-
-
-
-
 <!-- 현제 페이지에 해당하는 게시물만 출력 -->
 
 <c:set var='end' value="${skiprow+9 }"/>
@@ -81,16 +60,24 @@
 
 
 
-<tr>
-<td>${rs.ob_num }</td>  <%-- get, set이 있기때문에 ob_num 사용가능--%> 
-<td>${rs.ob_writer }</td>
-<td>${rs.ob_date }</td>
 
-</tr>
-</c:forEach>
-</c:if>
+<table id='werivew'>
 <tr>
-<td colspan='5'>
+<td id='vinum2' >${rs.ob_num }</td>  <%-- get, set이 있기때문에 ob_num 사용가능--%> 
+<td  id='viname2'>${rs.ob_writer }</td>
+<td  id='vidate2'>${rs.ob_date }</td>
+<td id='vitext2'>${rs.ob_title }</td>
+</tr>
+</table>
+
+</c:forEach>
+
+</c:if>
+</div>
+
+
+
+<div colspan='5'>
  <c:set var="grpchk" value="${(reqpage-1)% grpsize}"/>
  <c:set var="startpage" value="${(reqpage-grpchk) }"/>
  <c:if test ="${(startpage - grpsize) > 0}">
@@ -109,9 +96,4 @@
 </c:otherwise>
 </c:choose>
 </c:forEach>
-
-
-</td>
-</tr>
-</table>
 </div>

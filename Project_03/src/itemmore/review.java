@@ -1,17 +1,29 @@
 package itemmore;
 
+import java.util.Date;
+
 public class review {
 	
-	private String num;//순서
+	private int num;//순서
 	private String id;  //작성자
 	private String text;  //작성내용
-	private String date;  //작성날짜
+	private Date date;  //작성날짜
 	
-
-	public String getNum() {
+	public review() {}
+	public review(int num, String id, String text,  Date date) {
+		this.num=num;
+		this.id=id;
+		this.text=text;
+		this.date=date;
+	
+	}
+	
+	
+	
+	public int getNum() {
 		return num;
 	}
-	public void setNum(String num) {
+	public void setNum(int num) {
 		this.num = num;
 	}
 
@@ -27,10 +39,10 @@ public class review {
 	public void setText(String text) {
 		this.text = text;
 	}
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 

@@ -24,7 +24,7 @@
   	<servlet-class>itemmore.control</servlet-class>
   	<init-param>
   		<param-name>config</param-name>
-  		<param-value>C:\\apache-tomcat-8.5.61\\webapps\\Project_03\\WEB-INF\\itemmore.properties</param-value>
+  		<param-value>C:\\tomcat\\webapps\\Project_03\\WEB-INF\\itemmore.properties</param-value>
   	</init-param>
   </servlet>
   <servlet-mapping>

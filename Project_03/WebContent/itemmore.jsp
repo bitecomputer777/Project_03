@@ -25,20 +25,20 @@ function more2(){
 
 
 <div id='dnmanu'>
-<a href='more.do'><button id='itemmore'>상품정보</button></a>
- <a href='review.do'> <button id='itemmore'>
+<a href='more.it'><button id='itemmore'>상품정보</button></a>
+ <a href='review.it'> <button id='itemmore'>
 <span id='reviewtext'> 리뷰 </span>
 <span id='reviewtitnum' onclick='more3()'> 3 </span>
 </button></a>
- <a href='change.do'><button id='itemmore'>반품, 교환정보 </span></a>
-</button>
+ <a href='change.it'><button id='itemmore'>반품, 교환정보 </span>
+</button></a>
 
 
 <div id='screen'>
 
 <c:set var="file" value="itemtext.jsp"/>
-<c:if test="${part!=null} ">
- <c:set var="file" value="${part}/${sub }.hsp"/>
+<c:if test="${sub!=null }">
+ <c:set var="file" value="${sub }"/>
 </c:if>
  <jsp:include page="${file }"/>
 

@@ -22,7 +22,7 @@
 	<div id='menu'>
 		<jsp:include page="menu.jsp"/>
 	</div>
-<c:if test="${sub==null }">
+<c:if test="${part==null }">
 	<div id='main_slide'>
 		<jsp:include page="main_slide.jsp"/>
 	</div>
