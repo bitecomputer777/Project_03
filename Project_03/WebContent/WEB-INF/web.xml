@@ -5,22 +5,5 @@
 <welcome-file-list>
     <welcome-file>main.jsp</welcome-file>
 </welcome-file-list>
-  
 
-  <servlet>
-  	<servlet-name>rute_navi</servlet-name>
-  	<servlet-class>com.main.rute_navi</servlet-class>
-  	<init-param>
-  		<param-name>config</param-name>
-  		
-  		<param-value>C:\Users\USER506-04\git\repository\Project_03\WebContent\WEB-INF\command.properties</param-value>
-  	</init-param>
-  	
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>rute_navi</servlet-name>
-  	<url-pattern>*.do</url-pattern>
-  </servlet-mapping>
-  
-  
   </web-app>
