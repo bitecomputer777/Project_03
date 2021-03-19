@@ -4,11 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>쿠폰 등록</title>
+<title>Insert title here</title>
 </head>
-<body>	
+<body>
 
-			 <div>쿠폰 등록</div>
-			 <div ><input type='text'></div>
 </body>
 </html>
