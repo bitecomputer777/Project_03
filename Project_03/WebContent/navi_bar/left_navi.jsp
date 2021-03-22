@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%request.setCharacterEncoding("UTF-8"); %>
 <c:set var="path" value="http://localhost:8080${pageContext.request.contextPath }"/>
 <c:set var="path_1" value="http://localhost:8080${pageContext.request.requestURL }"/>
 
@@ -12,7 +12,7 @@
 
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="/css/stylesheet.css"/> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css"/> 
 	<style>
 	#left_ul{
 			position:relative;

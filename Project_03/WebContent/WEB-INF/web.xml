@@ -19,7 +19,7 @@
   	<servlet-class>com.main.rute_navi</servlet-class>
   	<init-param>
   		<param-name>config</param-name>
-  		<param-value>C:/apache-tomcat-8.5.61/webapps/Project_03/WEB-INF/command.properties</param-value>
+  		<param-value>C:/tomcat/webapps/Project_03/WEB-INF/command.properties</param-value>
   	</init-param>
   	<load-on-startup>2</load-on-startup>
   </servlet>

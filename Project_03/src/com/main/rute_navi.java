@@ -2,6 +2,7 @@ package com.main;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -89,11 +90,11 @@ public class rute_navi extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		process(request,response);
 	}
-	protected void process(HttpServletRequest request,HttpServletResponse response)  {
+	protected void process(HttpServletRequest request,HttpServletResponse response) throws UnsupportedEncodingException  {
 		String uri = request.getRequestURI();
 		String cont = request.getContextPath();
 		String ind[] = uri.substring(cont.length()+1 ).split("/");
-		
+		request.setCharacterEncoding("utf-8");
 		String kind =null;
 		for(int i=0 ; i<ind.length ; i++ ) {
 			

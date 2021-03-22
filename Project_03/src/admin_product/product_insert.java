@@ -5,9 +5,9 @@ import javax.servlet.http.HttpServletRequest;
 public class product_insert implements product_service {
 
 	@Override
-	public void service(HttpServletRequest req) {
+	public String service(HttpServletRequest req) {
 		
-
+		return "product_admin/product_insert.jsp";
 	}
 
 }

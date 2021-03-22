@@ -17,7 +17,7 @@ public class product_hnd implements main_hnd{
 		System.out.println("product_hnd의 action 클래스 안의 변수 kind의 값 " + kind);
 		
 		Map<String,product_service> obs = createMap();
-		obs.get(kind).service(req);
+		view=obs.get(kind).service(req);
 		
 		
 

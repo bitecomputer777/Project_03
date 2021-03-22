@@ -53,7 +53,7 @@
 				<div>
 					<table>
 					
-							
+							<jsp:include page="${file }"/>
 					
 					</table>
 				

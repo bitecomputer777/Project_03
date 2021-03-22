@@ -154,7 +154,7 @@
 			
 			<li id="c"><a href="" >상품관리</a>
 				<ul class="li_hidden">
-					<li><a href="./product_admin/product_insert.jsp">상품등록</a></li>
+					<li><a href="product_insert.do">상품등록</a></li>
 					<li><a href="./product_admin/product_list.jsp">상품목록</a></li>
 					<li><a href="./product_admin/product_show_input.jsp">샾에 등록</a></li>
 					<li><a href="">요구상풒</a></li>
