@@ -10,7 +10,7 @@ public class review {
 	private Date date;  //작성날짜
 	
 	public review() {}
-	public review(int num, String id, String text,  Date date) {
+	public review(int num, String id, Date date,  String text) {
 		this.num=num;
 		this.id=id;
 		this.text=text;

@@ -63,10 +63,10 @@
 
 <table id='werivew'>
 <tr>
-<td id='vinum2' >${rs.ob_num }</td>  <%-- get, set이 있기때문에 ob_num 사용가능--%> 
-<td  id='viname2'>${rs.ob_writer }</td>
-<td  id='vidate2'>${rs.ob_date }</td>
-<td id='vitext2'>${rs.ob_title }</td>
+<td id='vinum2' >${rs.num }</td>  <%-- get, set이 있기때문에 ob_num 사용가능--%> 
+<td  id='viname2'>${rs.id }</td>
+<td  id='vidate2'>${rs.reviewdate }</td>
+<td id='vitext2'>${rs.text }</td>
 </tr>
 </table>
 
