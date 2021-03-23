@@ -19,7 +19,7 @@ public class product_hnd implements main_hnd{
 		Map<String,product_service> obs = createMap();
 		view=obs.get(kind).service(req);
 		
-		
+		if(view==null) view="../index.jsp";
 
 		
 		
