@@ -6,12 +6,12 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import reivew.reviewlist;
-import reivew.reivew_reply;
-import reivew.reivew_service;
-import reivew.reivew_view;
-import reivew.reivew_write;
-import reivew.reivew_writesave;
+import itemmore.mainitem_hnd;
+import review.reviewlist;
+import review.review_reply;
+import review.review_service;
+import review.review_write;
+import review.review_writesave;
 
 public class review_hnd implements mainitem_hnd{
 
@@ -21,7 +21,7 @@ public class review_hnd implements mainitem_hnd{
 		String view="index.jsp";
 		kind = kind.substring(0,kind.indexOf("."));
 	
-		Map<String,obtain_service> obs = createMap();
+		Map<String,review_service> obs = createMap();
 		obs.get(kind).service(req);
 		
 		return view;
@@ -32,7 +32,7 @@ public class review_hnd implements mainitem_hnd{
 		temp.put("review_write", new review_write());
 		temp.put("review_write_save", new review_writesave());
 		temp.put("review_reply", new review_reply());
-		temp.put("review", new review_list());
+		temp.put("reviewliset", new reviewlist());
 		return temp;
 	}
 }
@@ -52,4 +52,3 @@ public class review_hnd implements mainitem_hnd{
 	//	System.out.println("정상작동");
 	//	return view;
 	//		}
-}	

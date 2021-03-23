@@ -9,8 +9,13 @@ public class itemmore_hnd implements mainitem_hnd{
 	public String action(HttpServletRequest req, HttpServletResponse res, String kind) {
 	String view="main.jsp";
 		
+	itemmore_service is = new itemmore_service();
+	switch(kind) {
+	case "item.it":
+	is.view_item(req);
+	break;
+	}
 	
-		req.setAttribute("part", "item.jsp");
 		System.out.println("정상작동");
 		return view;	
 	}

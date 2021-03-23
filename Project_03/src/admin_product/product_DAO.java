@@ -4,6 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import javax.mail.FetchProfile.Item;
+
+import itemmore.item;
 
 public class product_DAO {
 	Connection conn=null;
@@ -82,4 +88,26 @@ public class product_DAO {
 		
 		return num;
 	}
+	
+
+	
+public	ArrayList<item>	list_select(){
+	ArrayList<item> list = new ArrayList<item>();
+	
+	String sql ="select * from item order by sale desc ";
+	try {
+		ptmt = conn.prepareStatement(sql);
+		rs = ptmt.executeQuery();
+		while(rs.next()) {
+			item data = new item(rs.getString("bigimg"),rs.getString("itemtit"), rs.getInt("pricereal"), rs.getString("itemno"));
+			list.add(data);
+				}
+			}catch(SQLException e) {
+				System.out.println("상품 등록 실패");
+				e.printStackTrace();
+			}
+	return list;
+	
+}
+	
 }

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,21 +18,15 @@
 
 			<span class='loc'>
 				<a href="" onclick="" class=home>홈</a>
- 
-				<span class='categorywrap'>
-				<span class='nexticon'> > </span>
-					<a class='dropdown' href=""> 음식 </a>
-				</span>
+
 
 				<span class='categorywrap'>
-				<span class='nexticon'> > </span>
-					<a class='dropdown' href=""> 닭 </a>
+			
+					<span class='nexticon'> ></span>
+				    <a class='dropdown' href=""> ${item.kind} </a>
 				</span>
-
-				<span class='categorywrap'>
-					<span class='nexticon'> > </span>
-					<a class='dropdown' href=""> 매움</a>
-				</span>
+				
+		
 			</span>
 
 			<name id='itemnum' title='상품번호'> 
@@ -39,14 +34,14 @@
 
 			<span class='ifitemnum'>
 				<span class='itemno'> 상품번호 : </span>
-				<span class='itemno'> A111111 </span>
+				<span class='itemno'> ${item.itemno} </span>
 			</span>
 
 
 		</div>
 
 		<div id='bigimg'> 
-			<img id='bigimg' src = "img/1.jpg">
+			<img id='bigimg' src = "img/${item.bigimg}"  > 
 		</div>
 	</span>
 
@@ -56,8 +51,8 @@
 	<span id='text'>
 	
 		<div class='price'>
-			<h1 class='itemtit'> 맛있는 닭발 </h1>
-			<span class='pricereal'>39800</span>
+			<h1 class='itemtit'> ${item.itemtit} </h1>
+			<span class='pricereal'>${item.pricereal}</span>
 			<span class='unit'> 원 </span>
 		</div>
 
@@ -67,14 +62,13 @@
 			<h2 class='titoption'> 옵션선택</h2>
 
 
-
-
-
 <select id='opt'>  
-<option> 옵션 1 (기본)</option>
-<option> 옵션 2</option>
-<option> 옵션 3</option>
-<option> 옵션 4</option>
+
+<c:forEach var="opt_name" items="${item.opt1}">
+<c:forEach var="opt_pri"  items="${item.opt2}"> 
+<option>${opt_name}   (추가 비용:${opt_pri}  ) </option>
+</c:forEach>
+</c:forEach>
 </select>	
 
 
@@ -89,10 +83,22 @@
 			<button class="btincrease" onclick=""  type="button">+</button>
 			</span>
 			
+			
+			
+			<script type="text/javascript">
+			function pri{
+		   var allpri = "${item.pricereal}"+"${opt_pri}"
+			var pri = document.querySelector('.num');
+			}
+               </script>
+			
+			
+			
+			
 			<span class='totalprice'>
 				<span id="totaltxt"> 총 상품금액 </span>
 				<span  id="totalnum">
-				<strong class="num">39800</strong>
+				<strong class="num">   </strong>
 				원 </span>
 			</span>
 			</div>

@@ -93,7 +93,7 @@ a{
 #prd_list li{
 	float:left;
 	width:31.4%;
-	line-height:300px;
+	height:300px;
 	margin:0px 10px 30px 10px;
 	background-color:pink;
 }

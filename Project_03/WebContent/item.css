@@ -503,3 +503,30 @@ font-size: 22pt;
 font-weight:550;
 }
 
+
+.minli{
+width:250px;
+height:325px;	
+display:inline-block;
+}
+.minimg{
+width:248px;
+height:248px;	
+}
+.minlitit{
+width:248px;
+height:auto;
+font-size: 13pt;	
+}
+.minliprice{
+width:248px;
+font-size: 13pt;
+font-weight:750;	
+}
+
+
+
+
+
+
+
