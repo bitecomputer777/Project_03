@@ -8,16 +8,18 @@ public class itemtext {
 	private String keep;// 보관
 	private String kg;// 중량
 	private String detaimg ;//상세이미지
+	private String itemno; //상품번호
 	
 
 	public itemtext() {}
-	public itemtext (String condition, String from, String brand, String keep, String kg,String detaimg) {
+	public itemtext (String condition, String from, String brand, String keep, String kg,String detaimg, String itemno) {
 		this.condition=condition;
 		this.from=from;
 		this.brand=brand;
 		this.keep=keep;
 		this.kg=kg;
 		this.detaimg=detaimg;
+		this.itemno=itemno;
 		}
 	
 	
@@ -56,6 +58,12 @@ public class itemtext {
 	}
 	public void setDetaimg(String detaimg) {
 		this.detaimg = detaimg;
+	}
+	public String getItemno() {
+		return itemno;
+	}
+	public void setItemno(String itemno) {
+		this.itemno = itemno;
 	}
 	
 	

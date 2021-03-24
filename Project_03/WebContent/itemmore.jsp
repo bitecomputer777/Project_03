@@ -51,19 +51,19 @@ function more2(){
 <span class='liitem'>
 <a href='item.jsp' >
 <div class=liimg>
-<img class='img' src = "img/1.jpg">
+<img id='bigimg' src = "img/${item.bigimg}"  > 
 </div>
 <div class='liitemtext'>
 <div class='litit'>
-아주 맛있는 닭발(상품이름)
+${item.itemtit}
 </div>
 <div class='litext'>
-아주 맛있어요!(상품 내용)
+
 
 </div>
 <div class='pricefil'> 
 <div class='liprice'>
-3000 원
+${item.pricereal}
 </div>
 </div>
 </div>

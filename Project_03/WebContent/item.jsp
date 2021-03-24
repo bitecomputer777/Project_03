@@ -85,11 +85,8 @@
 			
 			
 			
-			<script type="text/javascript">
-			function pri{
-		   var allpri = "${item.pricereal}"+"${opt_pri}"
-			var pri = document.querySelector('.num');
-			}
+			<script>
+					
                </script>
 			
 			
