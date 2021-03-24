@@ -18,26 +18,30 @@ public class review_hnd implements mainitem_hnd{
 	public String action(HttpServletRequest req, 
 			HttpServletResponse res, String kind) {
 		
-		String view="index.jsp";
-		kind = kind.substring(0,kind.indexOf("."));
+		String view="main.jsp";
+
+		review_service is = new review_service();
+		switch(kind){
+			case "review.it":
+				is.review(req);
+					break;
+			case "write.it":
+				is.write(req);
+		}
+		
 	
-		Map<String,review_service> obs = createMap();
-		obs.get(kind).service(req);
 		
 		return view;
 	}
 	
-	private Map<String,review_service> createMap(){
-		Map<String,review_service> temp = new HashMap<>();
-		temp.put("review_write", new review_write());
-		temp.put("review_write_save", new review_writesave());
-		temp.put("review_reply", new review_reply());
-		temp.put("reviewliset", new reviewlist());
-		return temp;
-	}
+
+
 }
 	
-	
+
+
+
+
 	
 	
 	

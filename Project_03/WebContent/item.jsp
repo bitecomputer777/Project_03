@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+       <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,12 +65,18 @@
 
 <select id='opt'>  
 
-<c:forEach var="opt_name" items="${item.opt1}">
-<c:forEach var="opt_pri"  items="${item.opt2}"> 
-<option>${opt_name}   (추가 비용:${opt_pri}  ) </option>
-</c:forEach>
+<c:forEach var="i" begin="0" end="${fn:length(item.opt1)-1}" step="1">
+
+<option>${item.opt1[i]}   (추가 비용:${item.opt2[i]}  ) </option>
+
 </c:forEach>
 </select>	
+<%
+String[] a={"1000","2000","1000"};
+request.setAttribute("list",a);
+request.setAttribute("money", 15000);
+%>
+
 
 
 <div id='void'> </div>
@@ -78,16 +85,59 @@
 		<div id='buy'>
 		<div id='ctrl'>
 			<span class="numctrl">
-			<button class="btdecrease" onclick=""  type="button">-</button>
-			<span name="order" id='order' class='num'  title='수량'>1</span>
-			<button class="btincrease" onclick=""  type="button">+</button>
-			</span>
+			<button class="btdecrease" onclick="minus()" >-</button>
+			
+			<span name="order" id='order' class='num'  title='수량'></span>
+			
+			<button class="btincrease" onclick="plus()">+</button>
+					</span>
+		
+	<input type='text' name='tot_money' id='tot_money' style='border:none;'>	
+			
+	<script>
+	
+	var order_num=1;
+	var order=null;
+	var tot_money=null;
+	var opt_money='${a}';
+	var item_money ='${money}';
+	var tot=0;
+	
+	window.onload=function(){
+	tot_money=document.querrySelector("#tot_money");
+	tot_money.value=item_money;
+	tot=parseInt(item_money);
+	order=document.querySelector("order");
+	order.innerHTML=order_num;
+	}
+	function opt_select(sel){
+		if(isNaN(parseInt(sel.options[sel.selectedIndex].value)))
+			tot_money.value=tot;
+		else
+			tot_money.value=tot +parseInt(sel.options[sel.selectedIndex].value);
+	}
+	function minus(){
+		oder_num--;
+		if(order_num<1)
+			order_num=1;
+		else
+			tot = tot - item_money;
+		order.innerHTML=order_num;
+		
+		tot_money.value=tot
+		}
+	
+	function plus(){
+		order_num++;
+		tot = tot+parseInt(item_money);
+		order.innerHTML=order_num;
+		
+		tot_money.value=tot
+		
+	}
+</script>		
 			
 			
-			
-			<script>
-					
-               </script>
 			
 			
 			

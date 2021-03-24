@@ -26,10 +26,12 @@ function more2(){
 
 <div id='dnmanu'>
 <a href='more.it'><button id='itemmore'>상품정보</button></a>
- <a href='review.it'> <button id='itemmore'>
+
+ <a href='review.it?num=${item.itemno}' > <button id='itemmore'>
 <span id='reviewtext'> 리뷰 </span>
-<span id='reviewtitnum' onclick='more3()'> 3 </span>
+<span id='reviewtitnum' onclick='more3()'>   </span>
 </button></a>
+
  <a href='change.it'><button id='itemmore'>반품, 교환정보 </span>
 </button></a>
 
@@ -51,7 +53,7 @@ function more2(){
 <span class='liitem'>
 <a href='item.jsp' >
 <div class=liimg>
-<img id='bigimg' src = "img/${item.bigimg}"  > 
+<img class='img' src = "img/${item.bigimg}"  > 
 </div>
 <div class='liitemtext'>
 <div class='litit'>

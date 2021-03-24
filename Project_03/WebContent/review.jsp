@@ -22,7 +22,7 @@ String user = (String)session.getAttribute("user"); //로그인 확인용
 <div id=lireview'>
 
 <span id='reviewtext2'>리뷰</span>
-<span id='reviewnum'>0</span>
+<span id='reviewnum'>   </span>
 <span id='reviewtext2'>건</span>
 </div>
 
