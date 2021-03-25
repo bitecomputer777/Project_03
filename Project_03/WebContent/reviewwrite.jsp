@@ -6,7 +6,7 @@
 
 <form action='write.it' method='get' >
 <input type='hidden' name='num' value='${param.num}'> 
-<input type='hidden' name='user' value='${ff }'>
+<input type='hidden' name='user' value='dldpf'>
 
 
 <div id='myreiew'>

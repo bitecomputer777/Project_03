@@ -89,8 +89,12 @@ public class control extends HttpServlet {
 		if(hd!=null) {
 			view = hd.action(request, response, kind);
 		}
-		RequestDispatcher rd = request.getRequestDispatcher(view);
-		rd.forward(request, response);
+		if(view!=null){
+			RequestDispatcher rd = request.getRequestDispatcher(view);
+			rd.forward(request, response);
+		}
+		
+		
 	
 
 	}

@@ -63,9 +63,10 @@
 
 <table id='werivew'>
 <tr>
-<td id='vinum2' >${rs.num }</td>  <%-- get, set이 있기때문에 ob_num 사용가능--%> 
+<td id='vinum2' >${rs.num }</td>  <%-- get, set이 있기때문에 ob_num 사용가능
+ ${rs. 은 get, set이 되어있는 이름으로 해야함.}   --%> 
 <td  id='viname2'>${rs.id }</td>
-<td  id='vidate2'>${rs.reviewdate }</td>
+<td  id='vidate2'>${rs.date }</td>
 <td id='vitext2'>${rs.text }</td>
 </tr>
 </table>
@@ -81,9 +82,9 @@
  <c:set var="grpchk" value="${(reqpage-1)% grpsize}"/>
  <c:set var="startpage" value="${(reqpage-grpchk) }"/>
  <c:if test ="${(startpage - grpsize) > 0}">
- <a href= 'obtain.pic?pagenum= ${(startpage-1)}'>[이전]</a> <!--이전 클릭하면 넘어감-->
+ <a href= 'review.it?num=${param.num}&pagenum=${(startpage-1)}'>[이전]</a> <!--이전 클릭하면 넘어감-->
  </c:if>
- <c:forEach var="i" begin="${ startpage}"  end="${(startpage+grpsize)-1}" step= "1">
+ <c:forEach var="i" begin="${startpage}" end="${(startpage+grpsize)-1}" step= "1">
 <c:choose>
 <c:when test= "${i==reqpage }">
 [${i }]
@@ -92,7 +93,7 @@
 <c:set var="i" value="${(startpage+grpsize) - 1}"/>
 </c:when>
 <c:otherwise>
-<a href ='obtain.pic?pagenum=${i}'>[${i}]</a>
+<a href ='review.it?num=${param.num}&pagenum=${i}'>[${i}]</a>    <%--  --%>
 </c:otherwise>
 </c:choose>
 </c:forEach>

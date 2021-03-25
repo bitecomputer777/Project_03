@@ -1,5 +1,6 @@
 package review;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,14 +20,25 @@ public class review_hnd implements mainitem_hnd{
 			HttpServletResponse res, String kind) {
 		
 		String view="main.jsp";
-
+System.out.println("12345");
+		
+		
 		review_service is = new review_service();
 		switch(kind){
 			case "review.it":
 				is.review(req);
 					break;
 			case "write.it":
-				is.write(req);
+				System.out.println("가나다");
+				String no= is.write(req);
+				view=null;
+			try {
+				res.sendRedirect("review.it?num="+no);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+				
 		}
 		
 	
