@@ -1,21 +1,24 @@
-package itemmore;
+package change;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class change_hnd implements mainitem_hnd{
-	
-	
-	@Override
-       public String action(HttpServletRequest req, 
-			HttpServletResponse res, String kind) {
+import itemmore.mainitem_hnd;
+
+public class change_hnd implements mainitem_hnd {
+
+public String action(HttpServletRequest req,
+		HttpServletResponse res, String kind) {
 	String view="main.jsp";
 	
-	req.setAttribute("part", "item.jsp");
-	req.setAttribute("sub", "change.jsp");
-	System.out.println("정상작동");
-		
-		
-	return view;
-			}
-}	
+	change_service is = new change_service();
+	switch(kind) {
+	case"change.it":
+		is.change(req);
+		break;
+	
+	}
+	return view;	
+}
+
+}

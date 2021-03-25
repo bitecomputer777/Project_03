@@ -50,21 +50,3 @@ System.out.println("12345");
 
 }
 	
-
-
-
-
-	
-	
-	
-	
-//	@Override
-  //     public String action(HttpServletRequest req, 
-	//		HttpServletResponse res, String kind) {
-		//String view="main.jsp";
-		
-//		req.setAttribute("part", "item.jsp");
-//		req.setAttribute("sub", "review.jsp");
-	//	System.out.println("정상작동");
-	//	return view;
-	//		}

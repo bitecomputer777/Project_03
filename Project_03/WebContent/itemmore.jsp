@@ -13,11 +13,6 @@
 <link rel='stylesheet' type='text/css' href= 'item.css'>
 <script>
 
-function more2(){
-
-	
-	
-}
 </script>
 </head>
 <body>

@@ -18,8 +18,10 @@ public class review_service {
 	req.setAttribute("part","review.jsp");
 		}
 
+	
+	
 
-  public  String write (HttpServletRequest req) {	
+  public  String write (HttpServletRequest req) {	//리뷰 쓸 때 필요한 데이터
 	 String text= req.getParameter("text");
      String user = req.getParameter("user"); 
 	 String itemno = req.getParameter("num");
