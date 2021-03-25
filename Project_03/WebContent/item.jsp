@@ -63,21 +63,14 @@
 			<h2 class='titoption'> 옵션선택</h2>
 
 
-<select id='opt'>  
-
+<select id='opt' onchange="opt_select(this)">  
+<option> 옵션 선택</option>
 <c:forEach var="i" begin="0" end="${fn:length(item.opt1)-1}" step="1">
 
-<option>${item.opt1[i]}   (추가 비용:${item.opt2[i]}  ) </option>
+<option value='${item.opt2[i]}'> ${item.opt1[i]}   (추가 비용:${item.opt2[i]}  ) </option>
 
 </c:forEach>
 </select>	
-<%
-String[] a={"1000","2000","1000"};
-request.setAttribute("list",a);
-request.setAttribute("money", 15000);
-%>
-
-
 
 <div id='void'> </div>
 			</div>
@@ -87,7 +80,7 @@ request.setAttribute("money", 15000);
 			<span class="numctrl">
 			<button class="btdecrease" onclick="minus()" >-</button>
 			
-			<span name="order" id='order' class='num'  title='수량'></span>
+			<input type='text' id='order' name='buy_among' style="border:none;">
 			
 			<button class="btincrease" onclick="plus()">+</button>
 					</span>
@@ -98,41 +91,46 @@ request.setAttribute("money", 15000);
 	
 	var order_num=1;
 	var order=null;
-	var tot_money=null;
-	var opt_money='${a}';
-	var item_money ='${money}';
+	var tot_money=null
+	var item_money ='${item.pricereal}';
 	var tot=0;
+	var opt_money=0;
+	
 	
 	window.onload=function(){
-	tot_money=document.querrySelector("#tot_money");
-	tot_money.value=item_money;
+	tot_money=document.querySelector("#tot_money");
+	tot_money.value=item_money; 
 	tot=parseInt(item_money);
-	order=document.querySelector("order");
-	order.innerHTML=order_num;
+	order=document.querySelector("#order");
+	order.value=order_num;
 	}
 	function opt_select(sel){
-		if(isNaN(parseInt(sel.options[sel.selectedIndex].value)))
+		if(isNaN(parseInt(sel.options[sel.selectedIndex].value))){
 			tot_money.value=tot;
-		else
-			tot_money.value=tot +parseInt(sel.options[sel.selectedIndex].value);
+			opt_money=0;
+		}
+		else{
+			opt_money=parseInt(sel.options[sel.selectedIndex].value);
+			tot_money.value=tot + opt_money;
+		}
 	}
 	function minus(){
-		oder_num--;
+		order_num--;
 		if(order_num<1)
 			order_num=1;
 		else
 			tot = tot - item_money;
-		order.innerHTML=order_num;
+		order.value=order_num;
 		
-		tot_money.value=tot
+		tot_money.value=tot + opt_money;
 		}
 	
 	function plus(){
 		order_num++;
 		tot = tot+parseInt(item_money);
-		order.innerHTML=order_num;
+		order.value=order_num;
 		
-		tot_money.value=tot
+		tot_money.value=tot+opt_money;
 		
 	}
 </script>		
