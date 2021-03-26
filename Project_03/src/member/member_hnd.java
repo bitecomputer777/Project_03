@@ -11,7 +11,7 @@ public class member_hnd implements com.main.main_hnd{
    public String action(HttpServletRequest req, 
          HttpServletResponse res, String kind) {
       member_service ms = new member_service();
-      String view="index.jsp";
+      String view="member/login.jsp";
       
       kind = kind.substring(0,kind.indexOf("."));
       
@@ -32,6 +32,7 @@ public class member_hnd implements com.main.main_hnd{
       if(kind.equals("login") || kind.equals("join")) {         
          req.setAttribute("part", "member");
          req.setAttribute("sub", kind);
+         
       } else if(kind.equals("logout")) {
          ms.logout(req);
       }

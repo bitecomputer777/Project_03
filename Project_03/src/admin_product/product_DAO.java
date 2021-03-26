@@ -17,6 +17,11 @@ public class product_DAO {
 	ResultSet rs=null;
 	
 	public product_DAO() {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		}catch(ClassNotFoundException e) {
+			throw new RuntimeException("드라이버 로드 실패");
+		}
 		String uri="jdbc:oracle:thin:@175.203.68.186:1521:orcl";
 		String user="food";
 		String pass="123456";

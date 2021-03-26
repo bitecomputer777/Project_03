@@ -9,7 +9,7 @@
 <servlet>
  <servlet-name>pool</servlet-name>
  <servlet-class>admin_main.pool</servlet-class>
- <load-on-startup>1</load-on-startup>
+
 </servlet>
 
 
@@ -21,7 +21,7 @@
   		<param-name>config</param-name>
   		<param-value>C:/tomcat/webapps/Project_03/WEB-INF/command.properties</param-value>
   	</init-param>
-  	<load-on-startup>2</load-on-startup>
+  	
   </servlet>
   <servlet-mapping>
   	<servlet-name>rute_navi</servlet-name>
@@ -35,7 +35,7 @@
   		<param-name>config</param-name>
   		<param-value>C:\\tomcat\\webapps\\Project_03\\WEB-INF\\itemmore.properties</param-value>
   	</init-param>
-  	  	<load-on-startup>3</load-on-startup>	
+  	  		
   </servlet>
   <servlet-mapping>
   	<servlet-name>item</servlet-name>

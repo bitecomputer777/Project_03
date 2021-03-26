@@ -47,8 +47,8 @@ public class pool extends HttpServlet {
 					new GenericObjectPool<>(pool,poolconf);
 			pool.setPool(connpool);
 			Class.forName("org.apache.commons.dbcp2.PoolingDriver");
-			PoolingDriver driver = 
-					(PoolingDriver)DriverManager.getDriver("jdbc:apache:commons:dbcp");
+			PoolingDriver driver = new PoolingDriver();
+				//(PoolingDriver)DriverManager.getDriver("jdbc:apache:commons:dbcp");
 			driver.registerPool("connp", connpool);
 					
 		}catch(Exception e) {

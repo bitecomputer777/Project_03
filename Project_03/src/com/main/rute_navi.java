@@ -95,6 +95,8 @@ public class rute_navi extends HttpServlet {
 		String cont = request.getContextPath();
 		String ind[] = uri.substring(cont.length()+1 ).split("/");
 		request.setCharacterEncoding("utf-8");
+		//System.out.println("ind변수 part 이름0" + ind[0]);
+	//	System.out.println("ind변수 part 이름1" + ind[1]);
 		String kind =null;
 		for(int i=0 ; i<ind.length ; i++ ) {
 			
@@ -174,7 +176,7 @@ public class rute_navi extends HttpServlet {
 		//RequestDispatcher
 	try {	
 		
-		
+		request.setCharacterEncoding("utf-8");
 		RequestDispatcher rd= request.getRequestDispatcher(view);
 		
 			rd.include(request, response);
