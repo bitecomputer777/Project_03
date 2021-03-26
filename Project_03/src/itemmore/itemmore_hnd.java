@@ -16,7 +16,7 @@ public class itemmore_hnd implements mainitem_hnd{
 	break;
 	}
 	
-		System.out.println("정상작동");
+		System.out.println("페이지 넘기기 정상작동");
 		return view;	
 	}
 	

@@ -37,15 +37,15 @@
 </td>
 </tr>
 
-<tr> <td>판매자명</td>  <td> 에이케이에스앤디(주)AK인터넷쇼핑몰</td></tr>
-<tr><td>상호/대표자</td>  <td> 김재천</td></tr>
-<tr><td>연락처</td>   <td>1670-4523</td></tr>
-<tr><td>응대가능시간</td>  <td>09시 ~ 18시</td></tr>
-<tr><td>E-mail</td>  <td> bohye613@aekyung.kr</td></tr>
-<tr><td>FAX</td>  <td> 031-780-8832</td></tr>
-<tr><td>사업자 등록번호</td>  <td> 129-85-42351</td></tr>
-<tr><td>통신판매업</td>   <td> 신고2007-경기성남-0350 </td></tr>
-<tr><td>영업소재지</td>  <td>  경기도 성남시 분당구 황새울로258번길 31, 4층(수내동, 분당예미지빌딩)</td></tr>
+<tr> <td>판매자명</td>  <td> 에이케이에스앤디(주)AK인터넷쇼핑몰  </td></tr>
+<tr><td>상호/대표자</td>  <td> ${rs.name }</td></tr>
+<tr><td>연락처</td>   <td>${rs.tel} </td></tr>
+<tr><td>응대가능시간</td>  <td>${rs.teltime }</td></tr>
+<tr><td>E-mail</td>  <td> ${rs.email }</td></tr>
+<tr><td>FAX</td>  <td> ${rs.fax }</td></tr>
+<tr><td>사업자 등록번호</td>  <td>${rs.codenum }</td></tr>
+<tr><td>통신판매업</td>   <td> ${rs.address1 } </td></tr>
+<tr><td>영업소재지</td>  <td>  ${rs.address2 }</td></tr>
 
 
 

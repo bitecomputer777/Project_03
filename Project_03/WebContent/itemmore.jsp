@@ -20,14 +20,14 @@
 
 
 <div id='dnmanu'>
-<a href='more.it'><button id='itemmore'>상품정보</button></a>
+<a href='text.it?num=${item.itemno}'><button id='itemmore'>상품정보</button></a>
 
  <a href='review.it?num=${item.itemno}' > <button id='itemmore'>
 <span id='reviewtext'> 리뷰 </span>
-<span id='reviewtitnum' onclick='more3()'>   </span>
+<span id='reviewtitnum' >${rs.num } 건  </span>
 </button></a>
 
- <a href='change.it'><button id='itemmore'>반품, 교환정보 </span>
+ <a href='change.it?num=${item.itemno }'><button id='itemmore'>반품, 교환정보 </span>
 </button></a>
 
 

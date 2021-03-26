@@ -99,9 +99,8 @@ public void review_insert(String text, String user, String itemno) {//()안에�
 	}catch(SQLException e) {
 		e.printStackTrace();
 		System.out.println("댓글작성실패");
-		
 	}
-}
+	}
 
 private int getnum() {
 	String sql="select Max(num) as m from rivew";

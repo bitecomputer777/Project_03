@@ -1,5 +1,7 @@
 package change;
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -16,6 +18,17 @@ public String action(HttpServletRequest req,
 	case"change.it":
 		is.change(req);
 		break;
+		
+	case "changewr.it":
+		System.out.println("가나다");
+		String no= is.changewr(req);
+		view=null;
+	try {
+		res.sendRedirect("change.it?num="+no);
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}	
 	
 	}
 	return view;	

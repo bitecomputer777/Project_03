@@ -1,6 +1,6 @@
-package itemmore;
+package text;
 
-public class itemtext {
+public class text {
 	
 	private String condition; // 상태
 	private String from; // 원산지
@@ -11,8 +11,8 @@ public class itemtext {
 	private String itemno; //상품번호
 	
 
-	public itemtext() {}
-	public itemtext (String condition, String from, String brand, String keep, String kg,String detaimg, String itemno) {
+	public text() {}
+	public text (String condition, String from, String brand, String keep, String kg,String detaimg, String itemno) {
 		this.condition=condition;
 		this.from=from;
 		this.brand=brand;

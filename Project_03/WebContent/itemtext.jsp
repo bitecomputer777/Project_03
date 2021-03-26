@@ -23,7 +23,7 @@
      <table >
 <tr>
 <td class='tabletit'>상품 번호</td> 
-<td class='tabletext'>A111111</td>
+<td class='tabletext'>${item.itemno }</td>
 <td class='tabletit'>상품상태</td>
 <td class='tabletext'>신상품</td>
 </tr>

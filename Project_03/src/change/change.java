@@ -14,11 +14,11 @@ public class change {
 	
 	
 	public change() {}
-	public change(String name, String tel, String email, String fax, String codenum
+	public change(String name, String tel,String teltime,  String email, String fax, String codenum
 			,String address1, String address2, String itemno) {
 		this.name=name;
 		this.tel=tel;
-		this.teltime=teltime;
+		this.teltime = teltime;
 		this.email=email;
 		this.fax=fax;
 		this.codenum=codenum;
