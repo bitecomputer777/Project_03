@@ -4,7 +4,7 @@
     
     <ul class='usermenu'>
     	<li class='user_menu login'>
-    		<a href=''>로그인</a>
+    		<a href="login.do">로그인</a>
     	</li>
     	<li class='user_menu mypage'>
     		<a href=''>MYPAGE</a>

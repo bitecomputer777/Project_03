@@ -13,6 +13,8 @@ import java.sql.Date;
 
 
 
+
+
 public class memberDAO {
    private static final String name = null;
 private Connection conn=null;
@@ -51,7 +53,7 @@ private Connection conn=null;
       return false;
    }
    
-   public void member_insert(String id, String pw, String email, String birthday, int phone) {
+   public void member_insert(String id, String pw, String name, String phone, String email, String birthday) {
       String sql="insert into member(mnum,id,pass,name,phone,email,birthday,point,m_level)";
       sql +=" values(?,?,?,?,?,?,?,?,?)";
       int num=getnum("member");
@@ -61,7 +63,7 @@ private Connection conn=null;
          ptmt.setString(2, id);
          ptmt.setString(3, pw);
          ptmt.setString(4, name);
-         ptmt.setInt(5, phone);
+         ptmt.setString(5, phone);
          ptmt.setString(6, email);
          ptmt.setString(7, birthday);
          ptmt.setString(8, "0");
@@ -110,7 +112,8 @@ private Connection conn=null;
 
 
 
+
+
 }
 
 
-s

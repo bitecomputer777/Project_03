@@ -19,10 +19,15 @@ public class member_service {
       String name=req.getParameter("name");
       String phone=req.getParameter("phone");
       String email=req.getParameter("email");
-      String birthday=req.getParameter("birthday");
+      String birthyy=req.getParameter("birthyy");
+      String birthmm=req.getParameter("birthmm");
+      String birthdd=req.getParameter("birthdd");
+      String birthday = birthyy+birthmm+birthdd ; 
       memberDAO md = new memberDAO();
       md.member_insert(id,pw,name,phone,email,birthday);
+      System.out.println(birthday);
    }
+   
    
    public boolean login(HttpServletRequest request) {
       String id=request.getParameter("id");

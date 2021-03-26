@@ -3,9 +3,9 @@ package member;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import main.main_hnd;
+import com.main.main_hnd;
 
-public class member_hnd implements main_hnd{
+public class member_hnd implements com.main.main_hnd{
 
    @Override
    public String action(HttpServletRequest req, 

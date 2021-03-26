@@ -1,37 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 
-<sql:setDataSource var="conn"
-	driver="oracle.jdbc.driver.OracleDriver"
-	url="jdbc:oracle:thin:@localhost:1521:orcl"
-	user="jin95"
-	password="123456"
-/>
-
-<sql:query var="rs" dataSource="${conn }">
-	select id, pass from member where id=? and pass=?
-	<sql:param>${param.id }</sql:param>
-	<sql:param>${param.pw }</sql:param>
-</sql:query>
+<script>
+	var login_fail = '${login_fail}';
+	if(login_fail!=""){
+		alert("아이디또는 비밀번호를 잘못입력했습니다.");
+	}
+</script>
 
 
-<c:forEach var="data" items="${rs.rows}">
-	<c:set var="user" value="${param.id }" scope="session"/>
-	<c:redirect url="/" />
-</c:forEach>
-<c:if test="${sessionScope.user==null}">
-	<script>
-		alert("아이디 또는 비밀번호가 잘못되었습니다.");
-		history.back();
-	</script>
-</c:if>
-
-
-<sql:update dataSource="${conn }">
-	insert into member(mnum,id,pass,email,point,m_level)
-	 values(${num },'${param.id }','${param.pw }','${param.email }', '0', 1 )
-</sql:update>
-
-<c:redirect url="/"/>
+<div id='login_form'>
+	<form name='f' method='post' action='login.do'>
+	<input type='hidden' name='cmd' value='login'>
+		<div> 아이디 <input type='text' name='id' id='id'></div>
+		<div> 암호 <input type='password' name='pw' id='pw'></div>
+		<button type='button' id='login_bt'>로그인</button>
+		<button type='button' id='join'>회원가입</button>
+	</form>
+	 <script src="lib/member.js"></script>
+</div>

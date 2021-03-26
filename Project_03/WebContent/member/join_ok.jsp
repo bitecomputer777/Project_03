@@ -18,7 +18,7 @@
 </c:forEach>
 
 <sql:update dataSource="${conn }">
-	insert into member(mnum,id,pass,email,point,m_level)
+	insert into member(mnum,id,pass,name,phone,email,birtday,point,m_level)
 	 values(${num },'${param.id }','${param.pw }','${param.email }', '0', 1 )
 </sql:update>
 
