@@ -2,7 +2,6 @@ package com.main;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -19,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class rute_navi
  */
-@WebServlet("/rute_navi")
+@WebServlet("/mem_config")
 public class rute_navi extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Map<String,main_hnd>map = new HashMap<>();
@@ -36,15 +35,15 @@ public class rute_navi extends HttpServlet {
     public void init(ServletConfig config) throws ServletException{
     	System.out.println(" init ");
     	
-    	String Iparam = config.getInitParameter("config");
+    	String Iparam = config.getInitParameter("mem_config");
     	Properties prop = new Properties();
     	try(FileReader fs = new FileReader(Iparam)){
     		prop.load(fs);
-    		System.out.println("properties ");
+    		System.out.println("properties ¡∏¿Á ");
     		
     	}catch(IOException ioe) {
     		ioe.printStackTrace();
-    		System.out.println("properties ");
+    		System.out.println("properties  ¡∏¿Á«œ¡ˆ æ ¿Ω");
     		
     	}
     	Iterator<?> key = prop.keySet().iterator();
@@ -90,13 +89,11 @@ public class rute_navi extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		process(request,response);
 	}
-	protected void process(HttpServletRequest request,HttpServletResponse response) throws UnsupportedEncodingException  {
+	protected void process(HttpServletRequest request,HttpServletResponse response)  {
 		String uri = request.getRequestURI();
 		String cont = request.getContextPath();
 		String ind[] = uri.substring(cont.length()+1 ).split("/");
-		request.setCharacterEncoding("utf-8");
-		//System.out.println("indÎ≥ÄÏàò part Ïù¥Î¶Ñ0" + ind[0]);
-	//	System.out.println("indÎ≥ÄÏàò part Ïù¥Î¶Ñ1" + ind[1]);
+		
 		String kind =null;
 		for(int i=0 ; i<ind.length ; i++ ) {
 			
@@ -176,7 +173,7 @@ public class rute_navi extends HttpServlet {
 		//RequestDispatcher
 	try {	
 		
-		request.setCharacterEncoding("utf-8");
+		
 		RequestDispatcher rd= request.getRequestDispatcher(view);
 		
 			rd.include(request, response);

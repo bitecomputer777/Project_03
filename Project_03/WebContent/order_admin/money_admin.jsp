@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ page import="java.util.*" %>
+ <%@ taglib prefix ="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,64 +33,137 @@
 		}
 	
 	</style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			var nowday = new Date();
+				//${"#date_02"};
+			var yyyy = nowday.getFullYear();
+			var mm = nowday.getMonth()+1;
+			var dd = nowday.getDate(); 
+			 var today = yyyy + "-" + mm + "-" + dd;
+		
+			$("#to_day").click(function(){
+				
+				
+			
+				$("#date_01").val(today);
+				
+			});
+			
+			$("#week").click(function(){
+				
+				var date = new Date();
+					//${"#date_02"};
+				
+				date.setDate(date.getDate()-7);
+				 yyyy = date.getFullYear();
+				 mm = date.getMonth()+1;
+				 dd = date.getDate(); 
+				var weekpr = yyyy + "-" + mm + "-" + dd;
+				
+				$("#date_01").val(weekpr);
+				
+			});
+			
+			$("#month").click(function(){
+				var date = new Date();
+					//${"#date_02"};
+				
+				date.setMonth(date.getMonth() - 1);
+				 yyyy = date.getFullYear();
+				 mm = date.getMonth()+1;
+				 dd = date.getDate(); 
+				var monthpr = yyyy + "-" + mm + "-" + dd;
+				
+				
+				
+				
+				$("#date_01").val(monthpr);
+				
+			});
+			
+			
+			
+			
+			
+			
+				
+				
+			
+				
+			
+			
+			
+		});
+	
+	</script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 	<body>
 		
-			<%@ include file="/navi_bar/top_bar_index.jsp" %>
-		<%@ include file="/navi_bar/left_navi.jsp" %> 
+			
 		<div id="content">
 				<h2>입금관리</h2>
 				─────────────────────────────────────────────────────────────────
 				<div>
-					<form action="">
+					<form action="money_search.ord" method="post">
 					<table id="insert_table">
+					<jsp:useBean id="now" class="java.util.Date"/>
+					
+					
+							<fmt:formatDate value="${now}" pattern="yyyy-MM-dd "  var ="today"/>
 						
 						<tr>
-							<th>기간</th><td><input type="text" name="date_01">-<input type="text" name="date_02">
-								<input type="button" value="오늘" name="today">&nbsp;&nbsp;<input type="button" value="일주일" name="week">&nbsp;&nbsp;
-								<input type="button" value="한달" name="month"> </td>
+							
+							<th>기간</th><td><input type="text" name="date_01" id ="date_01" value="">-<input type="text" name="date_02" id ="date_02" value="${today}">
+							
+								<button type="button" id="to_day">오늘</button>&nbsp;
+								<button  type="button" id="week">일주일</button>&nbsp;
+								<button  type="button" id="month">한달</button>
+							</td>
 								
 						</tr>
 						<tr>
-							<th>통합검색</th><td><input type="text" name="serch"></td>
+							<th>통합검색</th><td><input type="text" name="serch_key"></td>
 						</tr>
 						<tr>
 							<th>입금방법</th>
 									<td>
-										<select>
+										<select name ="input_money">
 											<option value="0">고르세요</option>
-											<option value="1">무통장입금</option>
-											<option value="2">카드</option>
-											<option value="3">모바일 결제</option>									
+											<option value="money">무통장입금</option>
+											<option value="card">카드</option>
+											<option value="mobile">모바일 결제</option>									
 										</select>
 									</td>
 						</tr>
 						<tr>
 							<th>주문상태</th>
 									<td>
-										<select>
+										<select name ="order_state">
 											<option value="0">고르세요</option>
-											<option value="1">무통장입금</option>
-											<option value="2">카드</option>
-											<option value="3">모바일 결제</option>									
+											<option value="1">주문대기</option>
+											<option value="2">배송</option>
+											<option value="3">도착</option>									
 										</select>
 									</td>
 						</tr>
 						<tr>
-							<th>목로갯수</th>
+							<th>미납자</th>
 									<td>
-										<select>
+										<select name = "money_state">
 											<option value="0">고르세요</option>
-											<option value="1">무통장입금</option>
-											<option value="2">카드</option>
-											<option value="3">모바일 결제</option>									
+											<option value="n">미납</option>
+											<option value="y">납부</option>
+																			
 										</select>
 									</td>
 						</tr>
-						<tr>
-							<th></th><td><input type="checkbox" > 신청</td>
-						</tr>
+						
 						
 						
 							
