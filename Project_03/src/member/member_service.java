@@ -5,13 +5,9 @@ import javax.servlet.http.HttpServletRequest;
 public class member_service {
 
    public void id_check(HttpServletRequest req) {
-	   System.out.println("idchk :: .실헹");
       String id = req.getParameter("idchk");
-      System.out.println("id" + id);
-      System.out.println("idchk 실행");
       memberDAO md = new memberDAO();
       if(md.id_check(id)) {
-    	
          req.setAttribute("result", "중복");
       }
       req.setAttribute("id", id);

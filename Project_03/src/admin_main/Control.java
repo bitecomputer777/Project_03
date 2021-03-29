@@ -94,21 +94,10 @@ public class Control extends HttpServlet {
 	protected void process(HttpServletRequest request,HttpServletResponse response)  {
 		String uri = request.getRequestURI();
 		String cont = request.getContextPath();
-		String ind[] = uri.substring(cont.length()+1 ).split("/");
+		String  kind = uri.substring(cont.length()+1 );
 		
-		String kind =null;
-		for(int i=0 ; i<ind.length ; i++ ) {
-			
-			if(i == 0 ) {
-				
-				kind=uri.substring(cont.length()+1 );
-				
-			}else if(i ==1) {
-				
-				kind=ind[1];
-			}
-			
-		}
+		
+		
 		
 		System.out.println("kind = " +kind);
 		String view ="index.jsp";
@@ -116,11 +105,7 @@ public class Control extends HttpServlet {
 		main_hnd hd = map.get(kind);
 		
 		
-		System.out.println(hd+"");
-		
-		System.out.println(""+uri);
-		System.out.println(cont);
-		System.out.println(kind);
+	
 		
 		if(hd != null) {
 			

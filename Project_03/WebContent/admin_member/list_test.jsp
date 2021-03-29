@@ -32,8 +32,7 @@
 <title>Insert title here</title>
 	<body>
 		
-		<%@ include file="/navi_bar/top_bar_index.jsp" %>
-		<%@ include file="/navi_bar/left_navi.jsp" %> 
+		
 		<div id ="content">
 				<h2>임시 위피 리스트 바</h2>
 				─────────────────────────────────────────────────────────────────

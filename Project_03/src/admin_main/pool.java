@@ -1,6 +1,7 @@
 package admin_main;
 
-import java.sql.DriverManager;
+
+
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,7 +25,7 @@ public class pool extends HttpServlet {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		}catch(ClassNotFoundException e) {
-			throw new RuntimeException("드라이버 로드 실패");
+			throw new RuntimeException("out");
 		}
 	}
 	
@@ -48,12 +49,13 @@ public class pool extends HttpServlet {
 			pool.setPool(connpool);
 			Class.forName("org.apache.commons.dbcp2.PoolingDriver");
 			PoolingDriver driver = new PoolingDriver();
-				//(PoolingDriver)DriverManager.getDriver("jdbc:apache:commons:dbcp");
+									//(PoolingDriver)DriverManager.getDriver("jdbc:apach:commons:dbcp");
+				
 			driver.registerPool("connp", connpool);
 					
 		}catch(Exception e) {
 			e.printStackTrace();
-			System.out.println("pool 오류");
+			System.out.println("pool ");
 		}
 		
 	}

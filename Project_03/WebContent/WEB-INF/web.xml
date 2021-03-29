@@ -9,8 +9,10 @@
 <servlet>
  <servlet-name>pool</servlet-name>
  <servlet-class>admin_main.pool</servlet-class>
-
+ <load-on-startup>1</load-on-startup>
 </servlet>
+
+
 
 
 
@@ -18,8 +20,8 @@
   	<servlet-name>rute_navi</servlet-name>
   	<servlet-class>com.main.rute_navi</servlet-class>
   	<init-param>
-  		<param-name>config</param-name>
-  		<param-value>C:/tomcat/webapps/Project_03/WEB-INF/command.properties</param-value>
+  		<param-name>mem_config</param-name>
+  		<param-value>C:\Users\user\git\Project_03\Project_03\WebContent\WEB-INF\command.properties</param-value>
   	</init-param>
   	
   </servlet>
@@ -28,13 +30,44 @@
   	<url-pattern>*.do</url-pattern>
   </servlet-mapping>
   
+<<<<<<< HEAD
+=======
+  <servlet>
+  	<servlet-name>member_control</servlet-name>
+  	<servlet-class>admin_main.member_control</servlet-class>
+  	<init-param>
+  		<param-name>ad_member_config</param-name>
+  		<param-value>C:\Users\user\git\Project_03\Project_03\WebContent\WEB-INF\admin_member.properties</param-value>
+  	</init-param>
+
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>member_control</servlet-name>
+  	<url-pattern>*.mem</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>ad_order_control</servlet-name>
+  	<servlet-class>admin_main.ad_order_control</servlet-class>
+  	<init-param>
+  		<param-name>ad_order_config</param-name>
+  		<param-value>C:\Users\user\git\Project_03\Project_03\WebContent\WEB-INF\admin_order.properties</param-value>
+  	</init-param>
+  	
+
+  </servlet>
+   <servlet-mapping>
+  	<servlet-name>ad_order_control</servlet-name>
+  	<url-pattern>*.ord</url-pattern>
+  </servlet-mapping>
+>>>>>>> branch 'master' of https://github.com/bitecomputer777/Project_03.git
   
    <servlet>
   	<servlet-name>item</servlet-name>
   	<servlet-class>itemmore.control</servlet-class>
   	<init-param>
   		<param-name>config</param-name>
-  		<param-value>C:\\tomcat\\webapps\\Project_03\\WEB-INF\\itemmore.properties</param-value>
+  		<param-value>C:\Users\user\git\Project_03\Project_03\WebContent\WEB-INF\itemmore.properties</param-value>
   	</init-param>
   	  		
   </servlet>

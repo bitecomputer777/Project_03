@@ -1,15 +1,14 @@
 package admin_member;
 
-import java.io.IOException;
-import java.util.Set;
-
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.ws.Response;
 
 import com.main.main_hnd;
-import com.sun.mail.iap.ResponseInputStream;
+
+
 
 public class member_hnd implements main_hnd {
 
@@ -17,76 +16,33 @@ public class member_hnd implements main_hnd {
 	
 	@Override
 	public String action(HttpServletRequest req, HttpServletResponse res, String kind) {
-		String cPath=req.getContextPath();
+	
 
 	
 		System.out.println(" ");
-			String view = "index.jsp";
+			String view = "test_admin_index.jsp";
 			
 			kind = kind.substring(0,kind.indexOf("."));
 			
 			System.out.println(" kind::"+kind);
-			String cmd = req.getParameter("cmd");
-			
-			
-			
-			if(kind != null) {
-				System.out.println("cmd ");
-				
-				if(kind.equals("ninja")) {
-					System.out.println("cmd ninja");
-					req.setAttribute("part","member");
-					req.setAttribute("sub", kind);
-					
-					try {
-						
-					 res.sendRedirect(cPath+"/admin_member/ninja.jsp");
-					
-					} catch (IOException e) {
-						
-						e.printStackTrace();
-					}
-					
-				
-				
-				}
-				if (kind.equals("list_message")) {
-					System.out.println("cmd list_message");
-
-					req.setAttribute("part", "member");
-					req.setAttribute("sub", kind);
-
-					try {
-						 res.sendRedirect(cPath+"/admin_member/list_message.jsp");
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-
-				}
-				if (kind.equals("member_admin")) {
-					
-					System.out.println("cmd member_admin");
-					req.setAttribute("part", "member");
-					req.setAttribute("sub", kind);
-
-					try {
-						res.sendRedirect(cPath+"/admin_member/member_admin.jsp");
-					
-						
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					
-
-				}
-				
-				
-				
-			}
-			
+			Map<String,member_service> obs = createMap();
+			obs.get(kind).service(req);
+			System.out.println("part == "+req.getAttribute("part"));
+			System.out.println("sub == "+req.getAttribute("sub"));
 		return view;
+	}
+	private Map<String,member_service>createMap(){
+		
+		Map<String ,member_service>temp = new HashMap<>();
+		temp.put("list_message",new message());
+		
+		temp.put("member_admin",new member_admin());
+		
+		temp.put("ninja", new ninja());
+		
+		temp.put("message_view", new message_view());
+		
+		return temp;
 	}
 
 	
