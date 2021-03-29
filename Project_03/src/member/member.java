@@ -4,9 +4,9 @@ public class member {
    private String id;
    private String pass;
    private String name;
-   private int phone;
+   private String phone;
    private String email;
-   private int birthday;
+   private String birthday;
    
    private int point;
    private int m_level;
@@ -16,7 +16,7 @@ public class member {
       this.m_level=0;
    }
    public member(String id, String pass, String email,
-         String point, int m_level, int birthday, int phone, String name) {
+         String point, int m_level, String birthday, String phone, String name) {
       this.id=id;
       this.pass=pass;
       this.name=name;
@@ -44,22 +44,24 @@ public String getName() {
 public void setName(String name) {
 	this.name = name;
 }
-public int getPhone() {
-	return phone;
-}
-public void setPhone(int phone) {
-	this.phone = phone;
-}
+
 public String getEmail() {
 	return email;
 }
 public void setEmail(String email) {
 	this.email = email;
 }
-public int getBirthday() {
+
+public String getPhone() {
+	return phone;
+}
+public void setPhone(String phone) {
+	this.phone = phone;
+}
+public String getBirthday() {
 	return birthday;
 }
-public void setBirthday(int birthday) {
+public void setBirthday(String birthday) {
 	this.birthday = birthday;
 }
 public int getPoint() {
