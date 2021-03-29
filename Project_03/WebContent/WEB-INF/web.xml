@@ -28,6 +28,7 @@
   	<url-pattern>*.do</url-pattern>
   </servlet-mapping>
   
+  
    <servlet>
   	<servlet-name>item</servlet-name>
   	<servlet-class>itemmore.control</servlet-class>

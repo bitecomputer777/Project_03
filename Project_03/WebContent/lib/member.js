@@ -1,6 +1,7 @@
 /**
  * 
  */
+ 
 window.onload=function(){
 	var login_bt = document.querySelector("#login_bt");
 	if(login_bt!=null)
@@ -49,6 +50,7 @@ function join_check(){
 }
 function id_check(){
 	var jf = document.j;
+	
 	var idchk = window.open("member/idcheck.jsp", "",
 	"left="+screen.width/2+",top="+screen.height/2+", width=250, height=150");
 

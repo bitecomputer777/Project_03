@@ -12,19 +12,31 @@ public class member_hnd implements com.main.main_hnd{
          HttpServletResponse res, String kind) {
       member_service ms = new member_service();
       String view="member/login.jsp";
-      
+      System.out.println("member_hnd 실행중");
       kind = kind.substring(0,kind.indexOf("."));
-      
+      System.out.println("kind:::"+kind);
       String cmd = req.getParameter("cmd");
-      if(cmd!=null) {
-         if(cmd.equals("chk")) {
+      	System.out.println(" cmd :::" + cmd);
+      if(kind != null) {
+    	  
+         if(kind.equals("member/idcheck")) {
             ms.id_check(req);
-            view="idcheck.jsp";
+            view="member/idcheck.jsp";
+            
          }
-         if(cmd.equals("login")) {
+         
+         if(kind.equals("login")) {
             if(ms.login(req))
-               return view;
-         }else if(cmd.equals("join")) {
+              view="main.jsp";
+            
+         }else if(kind.equals("join")) {
+        	 System.out.println("join 실행");
+        	view = "member/join.jsp";
+            
+            return view;
+         }else if(kind.equals("join_ok")) {
+        	 System.out.println("join_ok 실행");
+        	//view = "member/join_ok.jsp";
             ms.join(req);
             return view;
          }
@@ -32,6 +44,8 @@ public class member_hnd implements com.main.main_hnd{
       if(kind.equals("login") || kind.equals("join")) {         
          req.setAttribute("part", "member");
          req.setAttribute("sub", kind);
+         System.out.println("part 는"+req.getAttribute("part"));
+         System.out.println("usb 는"+req.getAttribute("sub"));
          
       } else if(kind.equals("logout")) {
          ms.logout(req);

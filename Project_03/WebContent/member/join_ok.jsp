@@ -5,8 +5,8 @@
 
 <sql:setDataSource var="conn"
 	driver="oracle.jdbc.driver.OracleDriver"
-	url="jdbc:oracle:thin:@localhost:1521:orcl"
-	user="jkr"
+	url="jdbc:oracle:thin:@175.203.68.186:1521:orcl"
+	user="food"
 	password="123456"
 />
 <sql:query dataSource="${conn }" var="rs">
@@ -18,8 +18,8 @@
 </c:forEach>
 
 <sql:update dataSource="${conn }">
-	insert into member(mnum,id,pass,name,phone,email,birtday,point,m_level)
-	 values(${num },'${param.id }','${param.pw }','${param.email }', '0', 1 )
+	insert into member(mnum,id,pass,name,phone,email,birthday,point,m_level)
+	 values(${num },'${param.id }','${param.pw }','${param.name }','${param.phone }','${param.email }','${param.birthday }', '0', 1 )
 </sql:update>
 
 <c:redirect url="/"/>

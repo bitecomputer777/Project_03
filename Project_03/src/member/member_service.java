@@ -5,9 +5,13 @@ import javax.servlet.http.HttpServletRequest;
 public class member_service {
 
    public void id_check(HttpServletRequest req) {
+	   System.out.println("idchk :: .실헹");
       String id = req.getParameter("idchk");
+      System.out.println("id" + id);
+      System.out.println("idchk 실행");
       memberDAO md = new memberDAO();
       if(md.id_check(id)) {
+    	
          req.setAttribute("result", "중복");
       }
       req.setAttribute("id", id);
@@ -24,8 +28,18 @@ public class member_service {
       String birthdd=req.getParameter("birthdd");
       String birthday = birthyy+birthmm+birthdd ; 
       memberDAO md = new memberDAO();
-      md.member_insert(id,pw,name,phone,email,birthday);
-      System.out.println(birthday);
+      member vo = new member();
+      vo.setId(id);
+      vo.setPass(pw);
+      vo.setName(name);
+      vo.setPhone(phone);
+      vo.setEmail(email);
+      vo.setBirthday(birthday);
+      
+      
+      
+      md.member_insert(vo);
+      System.out.println( "join :::" + birthday);
    }
    
    

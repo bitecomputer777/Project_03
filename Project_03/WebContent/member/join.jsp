@@ -1,12 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%response.setCharacterEncoding("euc-kr"); %>
+<script type='text/javascript' src='lib/member.js' >
 
+</script>
 <div id='join_form'>
-    <form name='j' method='post' action='join.do'>
+    <form name='j' method='post' action='join_ok.do'>
     <input type="hidden" name='cmd' value='join'>
     	<div>
     		아이디 <input type='text' name='id' id='id'>
+    		
     		<button type='button' id='id_cmp'>아이디중복확인</button>
+    		
     	</div>
   		<div>비밀번호 <input type='password' name='pw' id='pw'></div>
   		<div>비밀번호확인 <input type='password' name='pwre' id='pwre'></div>
