@@ -30,6 +30,8 @@
   	<url-pattern>*.do</url-pattern>
   </servlet-mapping>
   
+<<<<<<< HEAD
+=======
   <servlet>
   	<servlet-name>member_control</servlet-name>
   	<servlet-class>admin_main.member_control</servlet-class>
@@ -58,6 +60,7 @@
   	<servlet-name>ad_order_control</servlet-name>
   	<url-pattern>*.ord</url-pattern>
   </servlet-mapping>
+>>>>>>> branch 'master' of https://github.com/bitecomputer777/Project_03.git
   
    <servlet>
   	<servlet-name>item</servlet-name>
