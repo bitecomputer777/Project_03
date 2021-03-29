@@ -24,8 +24,18 @@ public class member_service {
       String birthdd=req.getParameter("birthdd");
       String birthday = birthyy+birthmm+birthdd ; 
       memberDAO md = new memberDAO();
-      md.member_insert(id,pw,name,phone,email,birthday);
-      System.out.println(birthday);
+      member vo = new member();
+      vo.setId(id);
+      vo.setPass(pw);
+      vo.setName(name);
+      vo.setPhone(phone);
+      vo.setEmail(email);
+      vo.setBirthday(birthday);
+      
+      
+      
+      md.member_insert(vo);
+      System.out.println( "join :::" + birthday);
    }
    
    
