@@ -17,6 +17,7 @@
 		<jsp:include page="top.jsp"/>
 	</div>
 	<div id='logo'>
+		
 		<span><img src=''></span>
 	</div>
 	<div id='menu'>

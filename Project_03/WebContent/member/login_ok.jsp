@@ -20,6 +20,7 @@
 
 <c:forEach var="data" items="${rs.rows}">
 	<c:set var="user" value="${param.id }" scope="session"/>
+	<c:set var=""
 	<c:redirect url="/" />
 </c:forEach>
 <c:if test="${sessionScope.user==null}">
