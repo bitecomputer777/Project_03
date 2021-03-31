@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>장바구니 </title>
 <%@include file = "" %>
-<link rel='stylesheet' type='text/css' href= 'my_fage.css'>
+
 <script >
 $(function(){
 	$("#btnList").click(function(){

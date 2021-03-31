@@ -42,9 +42,11 @@ public class member_service {
    public boolean login(HttpServletRequest request) {
       String id=request.getParameter("id");
       String pw = request.getParameter("pw");
+      System.out.println("id :: pw " + id +":"+ pw);
       memberDAO md = new memberDAO();
       if(md.member_login(id,pw)) {
          request.getSession().setAttribute("user", id);
+         System.out.println("로그인 동작 성공");
          return true;
       }
       

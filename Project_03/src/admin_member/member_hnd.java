@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.main.main_hnd;
 
+import member.member_service;
+
 
 
 public class member_hnd implements main_hnd {

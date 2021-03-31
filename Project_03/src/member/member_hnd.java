@@ -12,9 +12,9 @@ public class member_hnd implements com.main.main_hnd{
          HttpServletResponse res, String kind) {
       member_service ms = new member_service();
       String view="member/login.jsp";
-      System.out.println("member_hnd 실행중");
+     
       kind = kind.substring(0,kind.indexOf("."));
-      System.out.println("kind:::"+kind);
+   
       String cmd = req.getParameter("cmd");
       	System.out.println(" cmd :::" + cmd);
       if(kind != null) {
@@ -26,9 +26,11 @@ public class member_hnd implements com.main.main_hnd{
          }
          
          if(kind.equals("login")) {
-            if(ms.login(req))
+            if(ms.login(req)) {
+            	
               view="main.jsp";
-            
+              
+            }
          }else if(kind.equals("join")) {
         	 System.out.println("join 실행");
         	view = "member/join.jsp";
@@ -41,11 +43,13 @@ public class member_hnd implements com.main.main_hnd{
             return view;
          }
       }
+      
       if(kind.equals("login") || kind.equals("join")) {         
          req.setAttribute("part", "member");
          req.setAttribute("sub", kind);
+         
          System.out.println("part 는"+req.getAttribute("part"));
-         System.out.println("usb 는"+req.getAttribute("sub"));
+         System.out.println("sub 는"+req.getAttribute("sub"));
          
       } else if(kind.equals("logout")) {
          ms.logout(req);
@@ -53,3 +57,4 @@ public class member_hnd implements com.main.main_hnd{
       return view;
    }
 }
+   
