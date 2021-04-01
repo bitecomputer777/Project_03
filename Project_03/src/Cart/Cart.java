@@ -1,6 +1,6 @@
 package Cart;
 
-public class CartDTO {
+public class Cart {
 
 	private int cart_id;  
 	private String member_id;
@@ -11,6 +11,22 @@ public class CartDTO {
 	private int money;
 	private int among;
 	
+	public Cart() {
+		
+	}
+	public Cart(int cart_id,String member_id,String name,int itemno,String itemtit,
+				int pricereal,int money,int among) {
+	this.cart_id;
+	this.member_id;
+	this.name;
+	this.itemno;
+	this.itemtit;
+	this.pricereal;
+	this.money;
+	this.among;
+	
+	
+	}
 	
 	public int getCart_id() {
 		return cart_id;
@@ -62,10 +78,4 @@ public class CartDTO {
 		this.among = among;
 	}
 	
-
-@Override
-public String toString() {
-	return "CartDTO [cart_id=" + cart_id + ", memberid=" + member_id + ", name=" + name + ", itemno=" + itemno
-            + ", itemtit=" + itemtit + ", pricereal=" + pricereal + ", money=" + money + ", among=" + among + "]";
-}
 }

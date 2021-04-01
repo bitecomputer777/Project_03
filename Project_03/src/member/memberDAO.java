@@ -17,7 +17,7 @@ import java.sql.Date;
 
 public class memberDAO {
    private static final String mmmm = null;
-private Connection conn=null;
+   private Connection conn=null;
    private PreparedStatement ptmt=null;
    private ResultSet rs=null;
    
